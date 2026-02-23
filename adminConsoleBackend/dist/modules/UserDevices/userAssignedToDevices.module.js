@@ -15,19 +15,19 @@ const userAssignedToUser_service_1 = require("./userAssignedToUser.service");
 const userAssignedToUser_repository_1 = require("./userAssignedToUser.repository");
 const device_entity_1 = require("../devices/entities/device.entity");
 const user_entity_1 = require("../users/entities/user.entity");
-const devices_service_1 = require("../devices/devices.service");
 const devices_module_1 = require("../devices/devices.module");
-const devices_repository_1 = require("../devices/devices.repository");
 const deviceHistory_entity_1 = require("../devices/entities/deviceHistory.entity");
+const osInfo_module_1 = require("../osInfo/osInfo.module");
 let UserDeviceMapper = class UserDeviceMapper {
 };
 exports.UserDeviceMapper = UserDeviceMapper;
 exports.UserDeviceMapper = UserDeviceMapper = __decorate([
     (0, common_1.Module)({
-        imports: [typeorm_1.TypeOrmModule.forFeature([user_devices_entity_1.UsersAssets, device_entity_1.Device, user_entity_1.User, deviceHistory_entity_1.DeviceUsageHistory]), devices_module_1.DevicesModule],
+        imports: [typeorm_1.TypeOrmModule.forFeature([user_devices_entity_1.UsersAssets, device_entity_1.Device, user_entity_1.User, deviceHistory_entity_1.DeviceUsageHistory]), devices_module_1.DevicesModule, osInfo_module_1.OSInfoModule],
         controllers: [userAssignedToUser_controller_1.UsersDevicesController],
-        providers: [{ provide: "IUserDevicesService", useClass: userAssignedToUser_service_1.UserDevicesService }, { provide: "IUsersDevicesRepository", useClass: userAssignedToUser_repository_1.UsersDevicesRepository }, { provide: "IDevicesService", useClass: devices_service_1.DeviceService }, { provide: "IDeviceRepository", useClass: devices_repository_1.DeviceRepository }],
-        exports: [UserDeviceMapper, { provide: "IUsersDevicesRepository", useClass: userAssignedToUser_repository_1.UsersDevicesRepository },]
+        providers: [{ provide: "IUserDevicesService", useClass: userAssignedToUser_service_1.UserDevicesService }, { provide: "IUsersDevicesRepository", useClass: userAssignedToUser_repository_1.UsersDevicesRepository },
+        ],
+        exports: ["IUserDevicesService", "IUsersDevicesRepository", { provide: "IUsersDevicesRepository", useClass: userAssignedToUser_repository_1.UsersDevicesRepository },]
     })
 ], UserDeviceMapper);
 //# sourceMappingURL=userAssignedToDevices.module.js.map

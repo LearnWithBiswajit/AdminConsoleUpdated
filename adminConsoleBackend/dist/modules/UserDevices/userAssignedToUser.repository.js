@@ -34,9 +34,11 @@ let UsersDevicesRepository = class UsersDevicesRepository {
     async getInventory(page, limit, searchString) {
         try {
             let res;
-            let query = this.assetRepo.createQueryBuilder("assets")
-                .innerJoin('Users', 'users', "users.userId=assets.userId")
-                .innerJoin('Device', 'devices', "devices.Id=assets.deviceId")
+            let query = this.assetRepo
+                .createQueryBuilder("assets")
+                .innerJoin("Users", "users", "users.userId=assets.userId")
+                .innerJoin("Device", "devices", "devices.Id=assets.deviceId")
+                .innerJoin("OSInfo", "OI", "devices.OSId = OI.OSId")
                 .select("devices.Id", "id")
                 .addSelect("users.firstName", "firstName")
                 .addSelect("users.middleName", "middleName")
@@ -47,47 +49,75 @@ let UsersDevicesRepository = class UsersDevicesRepository {
                 .addSelect("devices.DeviceType", "deviceType")
                 .addSelect("devices.MACAddress", "macAddress")
                 .addSelect("devices.HostName", "hostName")
-                .addSelect("devices.OSType", "osType")
+                .addSelect("OI.OSType", "osType")
+                .addSelect("OI.OSName", "osName")
+                .addSelect("OI.OSVersion", "osVersion")
                 .addSelect("devices.SerialNumber", "serialNumber")
                 .addSelect("devices.Brand", "brand")
                 .addSelect("assets.ID", "assetId")
-                .where('devices.Status=:status', { status: enum_config_1.DeviceStatus.Active })
-                .andWhere('devices.IsDeleted =:isDeleted', { isDeleted: false });
+                .where("devices.Status=:status", { status: enum_config_1.DeviceStatus.Active })
+                .andWhere("devices.IsDeleted =:isDeleted", { isDeleted: false });
             if (searchString) {
                 query = query.andWhere(new typeorm_2.Brackets((qb) => {
-                    qb.andWhere("users.FirstName LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("users.MiddleName LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("users.LastName LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("users.Email LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.SerialNumber LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.HostName LIKE :searchString", { searchString: `%${searchString}%` });
+                    qb.andWhere("users.FirstName LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("users.MiddleName LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("users.LastName LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("users.Email LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("devices.SerialNumber LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("devices.HostName LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    });
                 }));
             }
-            res = await query.offset(Number((page - 1) * limit))
+            res = await query
+                .offset(Number((page - 1) * limit))
                 .limit(limit)
                 .getRawMany();
             return Promise.resolve(res);
         }
         catch (error) {
-            this.logger.error("This error occurred in Device Repository. Method Name: getInventory", error);
+            this.logger.error("This error occurred in UsersDevicesRepository. Method Name: getInventory", error);
             return Promise.reject(error);
         }
     }
     async getInventoryCount(searchString) {
         try {
-            let query = this.assetRepo.createQueryBuilder("assets")
-                .innerJoin('Users', 'users', "users.userId=assets.userId")
-                .innerJoin('Device', 'devices', "devices.Id=assets.deviceId")
-                .where('devices.Status=:status', { status: enum_config_1.DeviceStatus.Active })
-                .andWhere('devices.IsDeleted = :isDeleted', { isDeleted: false });
+            let query = this.assetRepo
+                .createQueryBuilder("assets")
+                .innerJoin("Users", "users", "users.userId=assets.userId")
+                .innerJoin("Device", "devices", "devices.Id=assets.deviceId")
+                .where("devices.Status=:status", { status: enum_config_1.DeviceStatus.Active })
+                .andWhere("devices.IsDeleted = :isDeleted", { isDeleted: false });
             if (searchString) {
                 query = query.andWhere(new typeorm_2.Brackets((qb) => {
-                    qb.andWhere("users.FirstName LIKE:searchString", { searchString: `%${searchString}%` })
-                        .orWhere("users.MiddleName LIKE:searchString", { searchString: `%${searchString}%` })
-                        .orWhere("users.LastName LIKE:searchString", { searchString: `%${searchString}%` })
-                        .orWhere("users.Email LIKE:searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.SerialNumber LIKE:searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.HostName LIKE :searchString", { searchString: `%${searchString}%` });
+                    qb.andWhere("users.FirstName LIKE:searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("users.MiddleName LIKE:searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("users.LastName LIKE:searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("users.Email LIKE:searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("devices.SerialNumber LIKE:searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("devices.HostName LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    });
                 }));
             }
             let res = await query.getCount();
@@ -95,7 +125,7 @@ let UsersDevicesRepository = class UsersDevicesRepository {
             return { TotalCount: res };
         }
         catch (error) {
-            this.logger.error("This error occurred in Device Repository. Method Name: getInventory", error);
+            this.logger.error("This error occurred in UsersDevicesRepository. Method Name: getInventory", error);
             return Promise.reject(error);
         }
     }
@@ -111,7 +141,10 @@ let UsersDevicesRepository = class UsersDevicesRepository {
     }
     async getDevicesByUserId(userId) {
         try {
-            let res = await this.assetRepo.find({ where: { userId: userId }, select: ["deviceId"] });
+            let res = await this.assetRepo.find({
+                where: { userId: userId },
+                select: ["deviceId"],
+            });
             let devicelist = [];
             let list = devicelist.concat(res.map((item) => item.deviceId));
             return Promise.resolve(list);
@@ -133,15 +166,18 @@ let UsersDevicesRepository = class UsersDevicesRepository {
     }
     async findAndUpdate(device) {
         try {
-            let allocatedDevices = await this.assetRepo.createQueryBuilder("UA")
+            let allocatedDevices = await this.assetRepo
+                .createQueryBuilder("UA")
                 .select("UA.DeviceID")
                 .where("UA.DeviceID IN (:deviceIds)", { deviceIds: device })
                 .groupBy("UA.DeviceID")
                 .getRawMany();
-            allocatedDevices = allocatedDevices.map(item => item.DeviceID);
+            allocatedDevices = allocatedDevices.map((item) => item.DeviceID);
             let deviceSet = new Set(allocatedDevices);
-            let unAllocatedDevices = device.filter(item => { if (!deviceSet.has(item))
-                return item; });
+            let unAllocatedDevices = device.filter((item) => {
+                if (!deviceSet.has(item))
+                    return item;
+            });
             let status = this.deviceRepo.update({ id: (0, typeorm_2.In)(unAllocatedDevices) }, { deviceStatus: enum_config_1.DeviceStatus.Dead });
             return Promise.resolve(status);
         }
@@ -152,9 +188,14 @@ let UsersDevicesRepository = class UsersDevicesRepository {
     }
     async deleteUserFromDevice(assetId) {
         try {
-            let record = await this.assetRepo.findOne({ where: { assetId: assetId } });
+            let record = await this.assetRepo.findOne({
+                where: { assetId: assetId },
+            });
             let res = await this.assetRepo.delete({ assetId: assetId });
-            return Promise.resolve({ deletedRecord: record, affectedRows: Number(res.affected) });
+            return Promise.resolve({
+                deletedRecord: record,
+                affectedRows: Number(res.affected),
+            });
         }
         catch (error) {
             this.logger.error("This error occured in UserDevicesRepository. Method Name: deleteUserFromDevice", error);
@@ -163,7 +204,9 @@ let UsersDevicesRepository = class UsersDevicesRepository {
     }
     async getUsersByDeviceId(deviceId) {
         try {
-            let res = await this.assetRepo.find({ where: { deviceId: deviceId } });
+            let res = await this.assetRepo.find({
+                where: { deviceId: deviceId },
+            });
             return Promise.resolve(res);
         }
         catch (error) {
@@ -175,9 +218,10 @@ let UsersDevicesRepository = class UsersDevicesRepository {
         try {
             let res;
             let query = this.deviceRepo
-                .createQueryBuilder('devices')
-                .leftJoin('UsersAssets', 'UsersAssets', 'devices.Id = UsersAssets.deviceId')
-                .leftJoin('Users', 'users', 'users.UserID = UsersAssets.userId')
+                .createQueryBuilder("devices")
+                .leftJoin("UsersAssets", "UsersAssets", "devices.Id = UsersAssets.deviceId")
+                .leftJoin("Users", "users", "users.UserID = UsersAssets.userId")
+                .innerJoin("OSInfo", "OI", "devices.OSId = OI.OSId")
                 .select("devices.Id", "id")
                 .addSelect("users.firstName", "firstName")
                 .addSelect("users.UserID", "userId")
@@ -189,21 +233,32 @@ let UsersDevicesRepository = class UsersDevicesRepository {
                 .addSelect("devices.DeviceType", "deviceType")
                 .addSelect("devices.MACAddress", "macAddress")
                 .addSelect("devices.HostName", "hostName")
-                .addSelect("devices.OSType", "osType")
+                .addSelect("OI.OSType", "osType")
+                .addSelect("OI.OSName", "osName")
+                .addSelect("OI.OSVersion", "osVersion")
                 .addSelect("devices.SerialNumber", "serialNumber")
                 .addSelect("devices.Brand", "brand")
                 .addSelect("devices.BitLockerID", "bitlockerId")
                 .addSelect("devices.RecoveryKey", "recoveryKey")
-                .where('devices.isDeleted = :isDeleted', { isDeleted: false });
+                .where("devices.isDeleted = :isDeleted", { isDeleted: false });
             if (searchString) {
                 query = query.andWhere(new typeorm_2.Brackets((qb) => {
-                    qb.andWhere("devices.SerialNumber LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.HostName LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.RecoveryKey LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.BitLockerID LIKE :searchString", { searchString: `%${searchString}%` });
+                    qb.andWhere("devices.SerialNumber LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("devices.HostName LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("devices.RecoveryKey LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("devices.BitLockerID LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    });
                 }));
             }
-            res = await query.offset(Number((page - 1) * limit))
+            res = await query
+                .offset(Number((page - 1) * limit))
                 .limit(limit)
                 .getRawMany();
             return Promise.resolve(res);
@@ -215,16 +270,25 @@ let UsersDevicesRepository = class UsersDevicesRepository {
     }
     async getInfoOfDevicesAndUserCount(searchString) {
         try {
-            let query = this.deviceRepo.createQueryBuilder('devices')
-                .leftJoin('UsersAssets', 'UsersAssets', 'devices.Id = UsersAssets.deviceId')
-                .leftJoin('Users', 'users', 'users.UserID = UsersAssets.userId')
-                .where('devices.isDeleted = :isDeleted', { isDeleted: false });
+            let query = this.deviceRepo
+                .createQueryBuilder("devices")
+                .leftJoin("UsersAssets", "UsersAssets", "devices.Id = UsersAssets.deviceId")
+                .leftJoin("Users", "users", "users.UserID = UsersAssets.userId")
+                .where("devices.isDeleted = :isDeleted", { isDeleted: false });
             if (searchString) {
                 query = query.andWhere(new typeorm_2.Brackets((qb) => {
-                    qb.andWhere("devices.SerialNumber LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.HostName LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.RecoveryKey LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.bitLockerId LIKE :searchString", { searchString: `%${searchString}%` });
+                    qb.andWhere("devices.SerialNumber LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("devices.HostName LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("devices.RecoveryKey LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    })
+                        .orWhere("devices.bitLockerId LIKE :searchString", {
+                        searchString: `%${searchString}%`,
+                    });
                 }));
             }
             let res = await query.getCount();

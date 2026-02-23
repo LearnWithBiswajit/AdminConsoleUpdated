@@ -3,6 +3,7 @@ import { Inventory, UserToDevice } from "../dto/userAssignedToDevice.dto";
 import { User } from "src/modules/users/entities/user.entity";
 import { UUID } from "crypto";
 import { UsersAssets } from "../entities/user_devices.entity";
+import { OSInfo } from "src/modules/osInfo/entities/osInfo.entity";
 export interface IUserDevicesService {
     getInventory(page: number, limit: number, searchString?: string): Promise<Record<string, Inventory[] | number>>;
     assignDevice(body: UserToDevice): Promise<UserToDevice[]>;
@@ -11,7 +12,7 @@ export interface IUserDevicesService {
     getInfoOfDevicesAndUser(page: number, limit: number, searchString?: string): Promise<Record<string, Inventory[] | number>>;
 }
 export interface IUsersDevicesRepository {
-    getInventory(page: number, limit: number, searchString?: string): Promise<(Device & User & UsersAssets)[]>;
+    getInventory(page: number, limit: number, searchString?: string): Promise<(Device & User & UsersAssets & OSInfo)[]>;
     allocateDevice(body: UsersAssets[]): Promise<UsersAssets[]>;
     getInventoryCount(searchString?: string): Promise<{
         TotalCount: number;
@@ -21,7 +22,7 @@ export interface IUsersDevicesRepository {
     findAndUpdate(device: string[]): Promise<any>;
     deleteUserFromDevice(assetId: UUID): Promise<Record<string, any>>;
     getUsersByDeviceId(deviceId: UUID): Promise<UsersAssets[]>;
-    getInfoOfDevicesAndUser(page: number, limit: number, searchString?: string): Promise<(Device & User & UsersAssets)[]>;
+    getInfoOfDevicesAndUser(page: number, limit: number, searchString?: string): Promise<(Device & User & UsersAssets & OSInfo)[]>;
     getInfoOfDevicesAndUserCount(searchString?: string): Promise<{
         TotalCount: number;
     }>;

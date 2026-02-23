@@ -14,21 +14,21 @@ const users_repository_1 = require("./users.repository");
 const typeorm_1 = require("@nestjs/typeorm");
 const user_entity_1 = require("./entities/user.entity");
 const devices_module_1 = require("../devices/devices.module");
-const devices_service_1 = require("../devices/devices.service");
-const devices_repository_1 = require("../devices/devices.repository");
 const device_entity_1 = require("../devices/entities/device.entity");
 const deviceHistory_entity_1 = require("../devices/entities/deviceHistory.entity");
-const userAssignedToUser_service_1 = require("../UserDevices/userAssignedToUser.service");
 const userAssignedToDevices_module_1 = require("../UserDevices/userAssignedToDevices.module");
+const appUser_entity_1 = require("./entities/appUser.entity");
+const osInfo_module_1 = require("../osInfo/osInfo.module");
 let UsersModule = class UsersModule {
 };
 exports.UsersModule = UsersModule;
 exports.UsersModule = UsersModule = __decorate([
     (0, common_1.Module)({
-        imports: [typeorm_1.TypeOrmModule.forFeature([user_entity_1.User, device_entity_1.Device, deviceHistory_entity_1.DeviceUsageHistory]), devices_module_1.DevicesModule, userAssignedToDevices_module_1.UserDeviceMapper],
+        imports: [typeorm_1.TypeOrmModule.forFeature([user_entity_1.User, device_entity_1.Device, deviceHistory_entity_1.DeviceUsageHistory, appUser_entity_1.AppUser]), devices_module_1.DevicesModule, userAssignedToDevices_module_1.UserDeviceMapper, osInfo_module_1.OSInfoModule],
         controllers: [users_controller_1.UsersController],
-        providers: [{ provide: "IUserService", useClass: users_service_1.UsersService }, { provide: "IUserRepository", useClass: users_repository_1.UserRepository }, { provide: "IDevicesService", useClass: devices_service_1.DeviceService }, { provide: "IDeviceRepository", useClass: devices_repository_1.DeviceRepository }, { provide: "IUserDevicesService", useClass: userAssignedToUser_service_1.UserDevicesService }],
-        exports: [UsersModule, { provide: "IUserRepository", useClass: users_repository_1.UserRepository },]
+        providers: [{ provide: "IUserService", useClass: users_service_1.UsersService }, { provide: "IUserRepository", useClass: users_repository_1.UserRepository },
+        ],
+        exports: ["IUserService", { provide: "IUserRepository", useClass: users_repository_1.UserRepository },]
     })
 ], UsersModule);
 //# sourceMappingURL=users.module.js.map

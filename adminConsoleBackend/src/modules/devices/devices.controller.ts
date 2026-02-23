@@ -11,7 +11,7 @@ import { CurrentContext } from 'src/decorators/user.decorator';
 @ApiTags('Devices')
 @Controller('devices')
 export class DevicesController {
-  constructor(@Inject("IDeviceService") private readonly devicesService: IDevicesService) { }
+  constructor(@Inject("IDevicesService") private readonly devicesService: IDevicesService) { }
   logger = new Logger();
 
 

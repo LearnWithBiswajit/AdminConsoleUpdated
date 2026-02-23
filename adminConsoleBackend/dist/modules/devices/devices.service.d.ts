@@ -3,9 +3,11 @@ import { BitLockerAndRecovaryKey, DeviceCount, DeviceDTO, Inventory, QueryDevice
 import { UpdateDeviceDTO } from './dto/updateDevice.dto';
 import { DeviceStatus, DeviceType, OSType } from 'src/config/enum.config';
 import { UUID } from 'crypto';
+import { IOSInfoService } from '../osInfo/Interfaces/osInfo.interface';
 export declare class DeviceService implements IDevicesService {
     private readonly deviceRepository;
-    constructor(deviceRepository: IDeviceRepository);
+    private readonly osService;
+    constructor(deviceRepository: IDeviceRepository, osService: IOSInfoService);
     logger: any;
     allDevices(query: QueryDevices): Promise<Record<string, object>>;
     createDevice(deviceDto: DeviceDTO): Promise<DeviceDTO>;
@@ -16,4 +18,5 @@ export declare class DeviceService implements IDevicesService {
     updateDevice(body: DeviceDTO): Promise<DeviceDTO>;
     markAsDeadDevice(deviceId: UUID): Promise<number>;
     addBitlockerKey(info: BitLockerAndRecovaryKey): Promise<string>;
+    private checkDeviceExists;
 }

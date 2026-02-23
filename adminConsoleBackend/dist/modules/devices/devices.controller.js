@@ -245,7 +245,7 @@ __decorate([
 exports.DevicesController = DevicesController = __decorate([
     (0, swagger_1.ApiTags)('Devices'),
     (0, common_1.Controller)('devices'),
-    __param(0, (0, common_1.Inject)("IDeviceService")),
+    __param(0, (0, common_1.Inject)("IDevicesService")),
     __metadata("design:paramtypes", [Object])
 ], DevicesController);
 //# sourceMappingURL=devices.controller.js.map

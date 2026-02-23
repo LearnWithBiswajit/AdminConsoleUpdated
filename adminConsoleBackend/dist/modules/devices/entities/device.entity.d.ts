@@ -1,7 +1,7 @@
-import { BrandName, DeviceStatus, DeviceType, OSType } from "src/config/enum.config";
+import { BrandName, DeviceStatus, DeviceType } from "src/config/enum.config";
 export declare class Device {
     id: string;
-    osType: OSType;
+    osId: string;
     deviceType: DeviceType;
     deviceStatus: DeviceStatus;
     macAddress: string[];

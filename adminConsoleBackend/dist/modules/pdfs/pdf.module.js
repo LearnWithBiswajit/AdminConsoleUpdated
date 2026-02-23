@@ -14,12 +14,13 @@ const device_entity_1 = require("../devices/entities/device.entity");
 const typeorm_1 = require("@nestjs/typeorm");
 const devices_repository_1 = require("../devices/devices.repository");
 const deviceHistory_entity_1 = require("../devices/entities/deviceHistory.entity");
+const devices_module_1 = require("../devices/devices.module");
 let PdfModule = class PdfModule {
 };
 exports.PdfModule = PdfModule;
 exports.PdfModule = PdfModule = __decorate([
     (0, common_1.Module)({
-        imports: [typeorm_1.TypeOrmModule.forFeature([device_entity_1.Device, deviceHistory_entity_1.DeviceUsageHistory])],
+        imports: [typeorm_1.TypeOrmModule.forFeature([device_entity_1.Device, deviceHistory_entity_1.DeviceUsageHistory]), devices_module_1.DevicesModule],
         controllers: [pdf_controller_1.PdfContoller],
         providers: [{ provide: "IPdfServices", useClass: pdf_service_1.PdfService }, { provide: "IDeviceRepository", useClass: devices_repository_1.DeviceRepository }],
         exports: [{ provide: "IPdfServices", useClass: pdf_service_1.PdfService }]

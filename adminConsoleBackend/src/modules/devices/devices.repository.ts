@@ -442,6 +442,19 @@ export class DeviceRepository implements IDeviceRepository {
     }
   }
 
+  public async getDeviceInfoByHostOrSerial(serialNumber: string, hostName: string): Promise<Device | null> {
+    try {
+      this.logger.log(`Execution Started for getting device by SerialNumber:${serialNumber}, HostName:${hostName}`);
+      let res:Device | null = await this.deviceRepo.findOne({where:[{serialNumber:serialNumber, isDeleted:false},{hostName:hostName, isDeleted:false}]});
+      this.logger.log(`Execution Completed for getting device by SerialNumber:${serialNumber}, HostName:${hostName}`);
+      return Promise.resolve(res);
+
+    } catch (error) {
+      this.logger.error("This error occurred in DeviceRepository. Method Name: getDeviceInfoByHostOrSerial", error);
+      return Promise.reject(error);
+    }
+  }
+
   // public async bitlockerByDeviceId(deviceId: UUID): Promise<Device|null> {
   //     try {
   //         let res:Device|null = await this.deviceRepo.findOne({where:{id:deviceId}});

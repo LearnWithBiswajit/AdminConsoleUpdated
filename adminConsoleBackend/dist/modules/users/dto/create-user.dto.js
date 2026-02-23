@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var _a;
+var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateUserDTO = exports.CreateUserDTO = void 0;
 const swagger_1 = require("@nestjs/swagger");
@@ -16,6 +16,7 @@ const class_validator_1 = require("class-validator");
 const class_validator_2 = require("@nestjs/class-validator");
 const crypto_1 = require("crypto");
 class CreateUserDTO {
+    userId;
     employeeId;
     firstName;
     middleName;
@@ -25,12 +26,17 @@ class CreateUserDTO {
 }
 exports.CreateUserDTO = CreateUserDTO;
 __decorate([
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", typeof (_a = typeof crypto_1.UUID !== "undefined" && crypto_1.UUID) === "function" ? _a : Object)
+], CreateUserDTO.prototype, "userId", void 0);
+__decorate([
     (0, swagger_1.ApiProperty)({
         type: String,
         description: "Employee Id of the employee",
         example: "ARC-5878-678"
     }),
-    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateUserDTO.prototype, "employeeId", void 0);
@@ -78,7 +84,7 @@ __decorate([
 __decorate([
     (0, swagger_1.ApiPropertyOptional)({
         type: String,
-        description: "Password the employee"
+        description: "Password of the employee"
     }),
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
@@ -102,7 +108,7 @@ __decorate([
     }),
     (0, class_validator_1.IsNotEmpty)(),
     (0, class_validator_2.IsUUID)(),
-    __metadata("design:type", typeof (_a = typeof crypto_1.UUID !== "undefined" && crypto_1.UUID) === "function" ? _a : Object)
+    __metadata("design:type", typeof (_b = typeof crypto_1.UUID !== "undefined" && crypto_1.UUID) === "function" ? _b : Object)
 ], UpdateUserDTO.prototype, "userId", void 0);
 __decorate([
     (0, swagger_1.ApiPropertyOptional)({

@@ -8,17 +8,20 @@ import { DeviceStatus, DeviceType, OSType } from 'src/config/enum.config';
 import { UUID } from 'crypto';
 import { User } from '../users/entities/user.entity';
 import { OSInfo } from '../osInfo/entities/osInfo.entity';
+import { IOSInfoService } from '../osInfo/Interfaces/osInfo.interface';
+import { OSInfoDto } from '../osInfo/dtos/osInfo.dto';
 @Injectable()
 export class DeviceService implements IDevicesService {
 
-  constructor(@Inject("IDeviceRepository") private readonly deviceRepository: IDeviceRepository) { }
+  constructor(@Inject("IDeviceRepository") private readonly deviceRepository: IDeviceRepository,
+    @Inject("IOSInfoService") private readonly osService: IOSInfoService) { }
   logger = new Logger();
 
   public async allDevices(query: QueryDevices): Promise<Record<string, object>> {
     try {
-      let allDevice: Device[]&OSInfo[] = await this.deviceRepository.findAllDevices(query);
+      let allDevice: Device[] & OSInfo[] = await this.deviceRepository.findAllDevices(query);
       let deviceCount: DeviceCount[] | number = await this.deviceRepository.findTotalCountByStatusAndDeviceType(query.deviceStatus, query.deviceType, query.osType, true, query.searchString);
-      let resp: DeviceDTO[] = allDevice.map((item: Device&OSInfo) => DeviceMapper.mapToDto(item));
+      let resp: DeviceDTO[] = allDevice.map((item: Device & OSInfo) => DeviceMapper.mapToDto(item));
       return Promise.resolve({
         response: resp,
         totalCount: Object(deviceCount)
@@ -31,8 +34,14 @@ export class DeviceService implements IDevicesService {
 
   public async createDevice(deviceDto: DeviceDTO): Promise<DeviceDTO> {
     try {
+      let checkDevice:{exists:boolean, message:string} = await this.checkDeviceExists(deviceDto.serialNumber, deviceDto.hostName);
+      if(checkDevice.exists){
+        throw new Error(checkDevice.message);
+      }
+      let osInfo: OSInfoDto = await this.osService.osInfoByVersion(deviceDto.osVersion, deviceDto.osType);
+      if (!osInfo) throw new Error("OS not found");
       deviceDto.userId ? deviceDto.deviceStatus = DeviceStatus.Active : deviceDto.deviceStatus = DeviceStatus.Dead;
-      let deviceEntity: Device = DeviceMapper.mapToEntity(deviceDto);
+      let deviceEntity: Device = DeviceMapper.mapToEntity({ ...deviceDto, ...osInfo });
       deviceEntity = await this.deviceRepository.insertDevice(deviceEntity);
       let res = DeviceMapper.mapToDeviceDto(deviceEntity);
       return Promise.resolve(res);
@@ -127,8 +136,9 @@ export class DeviceService implements IDevicesService {
 
   public async updateDevice(body: DeviceDTO): Promise<DeviceDTO> {
     try {
-
-      let deviceEntity: Device = DeviceMapper.mapToEntity(body);
+      let osInfo: OSInfoDto = await this.osService.osInfoByVersion(body.osVersion, body.osType);
+      if (!osInfo) throw new Error("OS not found");
+      let deviceEntity: Device = DeviceMapper.mapToEntity({...body, ...osInfo});
       let res: Device = await this.deviceRepository.updateDevice(deviceEntity);
       let device: DeviceDTO;
       device = DeviceMapper.mapToDeviceDto(res);
@@ -141,7 +151,7 @@ export class DeviceService implements IDevicesService {
 
   public async markAsDeadDevice(deviceId: UUID): Promise<number> {
     try {
-      let res:number = await this.deviceRepository.markAsDeadDevice(deviceId);
+      let res: number = await this.deviceRepository.markAsDeadDevice(deviceId);
       return Promise.resolve(res);
     } catch (error) {
       this.logger.error("This error occurred in DeviceService. Method Name: markAsDeadDevice", error);
@@ -149,17 +159,32 @@ export class DeviceService implements IDevicesService {
     }
   }
 
-    public async addBitlockerKey(info:BitLockerAndRecovaryKey):Promise<string>{
-    try{
+  public async addBitlockerKey(info: BitLockerAndRecovaryKey): Promise<string> {
+    try {
       // const deviceInfo:Device|null = await this.deviceRepository.getDeviceById(info.id);
       // if (deviceInfo.bitlockerId && deviceInfo.recoveryKey) throw new Error("Bitlocker already added");
-      let res:number=await this.deviceRepository.addBitlockerKey(info);
-      if(res===0){
+      let res: number = await this.deviceRepository.addBitlockerKey(info);
+      if (res === 0) {
         throw new HttpException("Device Not Found", 404);
       }
       return Promise.resolve("Bitlocker Added Successfully");
-    }catch(error){
-      this.logger.error("This error occurred in DeviceService. Method Name: addBitlockerKry", error);
+    } catch (error) {
+      this.logger.error("This error occurred in DeviceService. Method Name: addBitlockerKey", error);
+      return Promise.reject(error);
+    }
+  }
+
+  private async checkDeviceExists(serialNumber: string, hostName: string): Promise<{ exists: boolean, message: string }> {
+    try {
+      let res: Device | null = await this.deviceRepository.getDeviceInfoByHostOrSerial(serialNumber, hostName);
+      if (res && res.serialNumber == serialNumber) {
+        return Promise.resolve({exists:true, message:"Device Already exists with the same serial number."});
+      }else if(res && res.hostName == hostName){
+        return Promise.resolve({exists:true, message:"Device Already exists with the same host name."});
+      }
+        return Promise.resolve({exists:false, message:""});
+    } catch (error) {
+      this.logger.error("This error occurred in DeviceService. Method Name: checkDeviceExists", error);
       return Promise.reject(error);
     }
   }

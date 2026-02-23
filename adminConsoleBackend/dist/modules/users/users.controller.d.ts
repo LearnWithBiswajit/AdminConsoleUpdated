@@ -14,4 +14,5 @@ export declare class UsersController {
     fetchEmployeeById(email: string): Promise<UserDTO | null>;
     updateToAdmin(context: User, body: UpdateUserDTO): Promise<object>;
     revokeAdminPermission(context: User, body: UpdateUserDTO): Promise<object>;
+    registerAppUser(body: CreateUserDTO): Promise<UserDTO>;
 }

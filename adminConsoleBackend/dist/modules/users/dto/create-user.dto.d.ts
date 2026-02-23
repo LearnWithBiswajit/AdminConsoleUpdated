@@ -1,5 +1,6 @@
 import { UUID } from "crypto";
 export declare class CreateUserDTO {
+    userId: UUID;
     employeeId: string;
     firstName: string;
     middleName: string;

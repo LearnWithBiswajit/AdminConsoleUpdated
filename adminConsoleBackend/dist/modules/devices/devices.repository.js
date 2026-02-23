@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a, _b;
+var _a, _b, _c;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DeviceRepository = void 0;
 const common_1 = require("@nestjs/common");
@@ -20,17 +20,57 @@ const device_entity_1 = require("./entities/device.entity");
 const typeorm_2 = require("typeorm");
 const enum_config_1 = require("../../config/enum.config");
 const deviceHistory_entity_1 = require("./entities/deviceHistory.entity");
+const osInfo_entity_1 = require("../osInfo/entities/osInfo.entity");
 let DeviceRepository = class DeviceRepository {
     deviceRepo;
     deviceHistoryRepo;
-    constructor(deviceRepo, deviceHistoryRepo) {
+    osInfoRepo;
+    constructor(deviceRepo, deviceHistoryRepo, osInfoRepo) {
         this.deviceRepo = deviceRepo;
         this.deviceHistoryRepo = deviceHistoryRepo;
+        this.osInfoRepo = osInfoRepo;
     }
     logger = new common_1.Logger();
     async findAllDevices(query) {
         try {
-            let res = await this.deviceRepo.find({ where: [{ deviceStatus: query.deviceStatus, deviceType: query.deviceType, osType: query.osType, isDeleted: false, serialNumber: (0, typeorm_2.Like)(query.searchString ? `%${query.searchString}%` : `%%`) }, { deviceStatus: query.deviceStatus, deviceType: query.deviceType, osType: query.osType, isDeleted: false, hostName: (0, typeorm_2.Like)(query.searchString ? `%${query.searchString}%` : `%%`) }], skip: Number((query.page - 1) * query.limit), take: query.limit });
+            let dbQuery = this.deviceRepo
+                .createQueryBuilder("D")
+                .innerJoin("OSInfo", "OI", "D.OSId = OI.OSId")
+                .select("D.Id", "id")
+                .addSelect("D.DeviceType", "deviceType")
+                .addSelect("D.Status", "deviceStatus")
+                .addSelect("D.HostName", "hostName")
+                .addSelect("D.SerialNumber", "serialNumber")
+                .addSelect("D.Brand", "brand")
+                .addSelect("D.MACAddress", "macAddress")
+                .addSelect("D.BitlockerID", "bitlockerId")
+                .addSelect("D.recoveryKey", "recoveryKey")
+                .addSelect("OI.OSType", "osType")
+                .addSelect("OI.OSName", "osName")
+                .addSelect("OI.OSVersion", "osVersion")
+                .where("D.IsDeleted =:isDeleted", { isDeleted: false });
+            if (query.deviceStatus) {
+                dbQuery.andWhere("COALESCE(D.Status) =:status", { status: query.deviceStatus });
+            }
+            if (query.deviceType) {
+                dbQuery.andWhere("D.DeviceType =:deviceType", { deviceType: query.deviceType });
+            }
+            if (query.osType) {
+                dbQuery.andWhere("OI.OSType =:osType", { osType: query.osType });
+            }
+            if (query.searchString) {
+                dbQuery = dbQuery.andWhere(new typeorm_2.Brackets((qb) => {
+                    qb.where("D.SerialNumber LIKE :searchString", {
+                        searchString: query.searchString,
+                    }).orWhere("D.HostName LIKE :searchString", {
+                        searchString: query.searchString,
+                    });
+                }));
+            }
+            let res = await dbQuery
+                .limit(query.limit)
+                .offset(Number(query.page - 1) * query.limit)
+                .getRawMany();
             return Promise.resolve(res);
         }
         catch (error) {
@@ -50,7 +90,11 @@ let DeviceRepository = class DeviceRepository {
     }
     async updateDeviceStatus(updateDeviceEntity, deviceIds) {
         try {
-            let updateIds = deviceIds ? deviceIds : updateDeviceEntity?.id ? Array.of(updateDeviceEntity.id) : null;
+            let updateIds = deviceIds
+                ? deviceIds
+                : updateDeviceEntity?.id
+                    ? Array.of(updateDeviceEntity.id)
+                    : null;
             let res = await this.deviceRepo.update({ id: (0, typeorm_2.In)(updateIds) }, { deviceStatus: updateDeviceEntity.deviceStatus });
             if (res.affected && res.affected > 0) {
                 return Promise.resolve(res.affected);
@@ -68,15 +112,19 @@ let DeviceRepository = class DeviceRepository {
         try {
             let res;
             if (!osType && !flag) {
-                let query = this.deviceRepo.createQueryBuilder('D')
+                let query = this.deviceRepo
+                    .createQueryBuilder("D")
+                    .innerJoin("OSInfo", "OI", "D.OSId = OI.OSId")
                     .select("D.DeviceType", "deviceType")
-                    .addSelect("D.OSType", "osType")
+                    .addSelect("OI.OSType", "osType")
                     .addSelect("COUNT(1)", "count")
                     .where("D.Status = :deviceStatus", { deviceStatus: deviceStatus })
                     .andWhere("D.IsDeleted = :isDeleted", { isDeleted: false })
-                    .groupBy("D.OSType, D.DeviceType");
+                    .groupBy("OI.OSType, D.DeviceType");
                 if (deviceType) {
-                    query.andWhere("D.DeviceType = :deviceType", { deviceType: deviceType });
+                    query.andWhere("D.DeviceType = :deviceType", {
+                        deviceType: deviceType,
+                    });
                 }
                 this.logger.log(`Execution started for fetching total count with device type ${deviceType}`);
                 let res = query.getRawMany();
@@ -85,7 +133,23 @@ let DeviceRepository = class DeviceRepository {
                 return Promise.resolve(res);
             }
             this.logger.log(`Executing fetching total count without device type`);
-            return await this.deviceRepo.count({ where: [{ deviceStatus: deviceStatus, deviceType: deviceType, osType: osType, isDeleted: false, serialNumber: (0, typeorm_2.Like)(searchString ? `%${searchString}%` : `%%`) }, { deviceStatus: deviceStatus, deviceType: deviceType, osType: osType, isDeleted: false, hostName: (0, typeorm_2.Like)(searchString ? `%${searchString}%` : `%%`) }] });
+            let dbQuery = this.deviceRepo
+                .createQueryBuilder("D")
+                .innerJoin("OSInfo", "OI", "D.OSId = OI.OSId")
+                .where("D.Status =:status", { status: deviceStatus })
+                .andWhere("D.DeviceType =:deviceType", { deviceType: deviceType })
+                .andWhere("OI.OSType =:osType", { osType: osType })
+                .andWhere("D.IsDeleted =:isDeleted", { isDeleted: false });
+            if (searchString) {
+                dbQuery = dbQuery.andWhere(new typeorm_2.Brackets((qb) => {
+                    qb.where("D.SerialNumber LIKE :searchString", {
+                        searchString: searchString,
+                    }).orWhere("D.HostName LIKE :searchString", {
+                        searchString: searchString,
+                    });
+                }));
+            }
+            return await dbQuery.getCount();
         }
         catch (error) {
             this.logger.error("This error occurred in Device Repository. Method Name: findTotalCountByStatusAndDeviceType", error);
@@ -105,35 +169,7 @@ let DeviceRepository = class DeviceRepository {
     }
     async getInventory(page, limit, searchString) {
         try {
-            let res;
-            let query = this.deviceRepo.createQueryBuilder("devices")
-                .innerJoin('Users', 'users', "users.userId=devices.userId")
-                .select("devices.Id", "id")
-                .addSelect("users.firstName", "firstName")
-                .addSelect("users.middleName", "middleName")
-                .addSelect("users.LastName", "lastName")
-                .addSelect("users.Email", "email")
-                .addSelect("devices.Status", "deviceStatus")
-                .addSelect("devices.DeviceType", "deviceType")
-                .addSelect("devices.MACAddress", "macAddress")
-                .addSelect("devices.HostName", "hostName")
-                .addSelect("devices.OSType", "osType")
-                .addSelect("devices.SerialNumber", "serialNumber")
-                .addSelect("devices.Brand", "brand")
-                .where('devices.Status=:status', { status: enum_config_1.DeviceStatus.Active })
-                .andWhere("devices.IsDeleted=:isDeleted", { isDeleted: false });
-            if (searchString) {
-                query = query.andWhere(new typeorm_2.Brackets((qb) => {
-                    qb.where("users.firstName LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("users.middlename LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("users.lastName LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("users.Email LIKE :searchString", { searchString: `%${searchString}%` })
-                        .orWhere("devices.SerialNumber LIKE :searchString", { searchString: `%${searchString}%` });
-                }));
-            }
-            res = await query.offset(Number((page - 1) * limit))
-                .limit(limit)
-                .getRawMany();
+            let res = [];
             return Promise.resolve(res);
         }
         catch (error) {
@@ -143,16 +179,28 @@ let DeviceRepository = class DeviceRepository {
     }
     async getInventoryCount(searchString) {
         try {
-            let query = await this.deviceRepo.createQueryBuilder("devices")
-                .innerJoin('Users', 'users', "users.userId=devices.userId")
-                .where('devices.Status=:status', { status: enum_config_1.DeviceStatus.Active })
+            let query = await this.deviceRepo
+                .createQueryBuilder("devices")
+                .innerJoin("Users", "users", "users.userId=devices.userId")
+                .where("devices.Status=:status", { status: enum_config_1.DeviceStatus.Active })
                 .andWhere("devices.IsDeleted=:isDeleted", { isDeleted: false });
             if (searchString) {
-                query = await query.andWhere("users.FirstName LIKE:searchString", { searchString: `%${searchString}%` })
-                    .orWhere("users.MiddleName LIKE:searchString", { searchString: `%${searchString}%` })
-                    .orWhere("users.LastName LIKE:searchString", { searchString: `%${searchString}%` })
-                    .orWhere("users.Email LIKE:searchString", { searchString: `%${searchString}%` })
-                    .orWhere("devices.SerialNumber LIKE:searchString", { searchString: `%${searchString}%` });
+                query = await query
+                    .andWhere("users.FirstName LIKE:searchString", {
+                    searchString: `%${searchString}%`,
+                })
+                    .orWhere("users.MiddleName LIKE:searchString", {
+                    searchString: `%${searchString}%`,
+                })
+                    .orWhere("users.LastName LIKE:searchString", {
+                    searchString: `%${searchString}%`,
+                })
+                    .orWhere("users.Email LIKE:searchString", {
+                    searchString: `%${searchString}%`,
+                })
+                    .orWhere("devices.SerialNumber LIKE:searchString", {
+                    searchString: `%${searchString}%`,
+                });
             }
             let res = await query.getCount();
             console.log(res);
@@ -178,7 +226,7 @@ let DeviceRepository = class DeviceRepository {
         try {
             let res = await this.deviceRepo.findOne({ where: { id: id } });
             if (!res) {
-                throw new Error('No such device found');
+                throw new Error("No such device found");
             }
             return Promise.resolve(res);
         }
@@ -217,12 +265,25 @@ let DeviceRepository = class DeviceRepository {
             return Promise.reject(error);
         }
     }
+    async getDeviceInfoByHostOrSerial(serialNumber, hostName) {
+        try {
+            this.logger.log(`Execution Started for getting device by SerialNumber:${serialNumber}, HostName:${hostName}`);
+            let res = await this.deviceRepo.findOne({ where: [{ serialNumber: serialNumber, isDeleted: false }, { hostName: hostName, isDeleted: false }] });
+            this.logger.log(`Execution Completed for getting device by SerialNumber:${serialNumber}, HostName:${hostName}`);
+            return Promise.resolve(res);
+        }
+        catch (error) {
+            this.logger.error("This error occurred in DeviceRepository. Method Name: getDeviceInfoByHostOrSerial", error);
+            return Promise.reject(error);
+        }
+    }
 };
 exports.DeviceRepository = DeviceRepository;
 exports.DeviceRepository = DeviceRepository = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, typeorm_1.InjectRepository)(device_entity_1.Device)),
     __param(1, (0, typeorm_1.InjectRepository)(deviceHistory_entity_1.DeviceUsageHistory)),
-    __metadata("design:paramtypes", [typeof (_a = typeof typeorm_2.Repository !== "undefined" && typeorm_2.Repository) === "function" ? _a : Object, typeof (_b = typeof typeorm_2.Repository !== "undefined" && typeorm_2.Repository) === "function" ? _b : Object])
+    __param(2, (0, typeorm_1.InjectRepository)(osInfo_entity_1.OSInfo)),
+    __metadata("design:paramtypes", [typeof (_a = typeof typeorm_2.Repository !== "undefined" && typeorm_2.Repository) === "function" ? _a : Object, typeof (_b = typeof typeorm_2.Repository !== "undefined" && typeorm_2.Repository) === "function" ? _b : Object, typeof (_c = typeof typeorm_2.Repository !== "undefined" && typeorm_2.Repository) === "function" ? _c : Object])
 ], DeviceRepository);
 //# sourceMappingURL=devices.repository.js.map

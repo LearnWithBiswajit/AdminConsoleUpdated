@@ -20,23 +20,23 @@ export class DeviceDTO {
     id: UUID
 
     //API property of the ostype id
-    // @ApiProperty({
-    //     enum:OSType,
-    //     description: "Os Type of the device in number: Linux = 1, MAC = 2, Windows = 3, Android = 4, IOS = 5",
-    //     example: 3
-    // })
-    // @IsEnum(OSType)
-    // @IsNotEmpty()
-    // @Type(() => Number)
-    // osType: OSType
-    // @ApiProperty({
-    //     type:String,
-    //     description:"Version of the OS",
-    //     example:11
-    // })
+    @ApiProperty({
+        enum:OSType,
+        description: "Os Type of the device in number: Linux = 1, MAC = 2, Windows = 3, Android = 4, IOS = 5",
+        example: 3
+    })
+    @IsEnum(OSType)
     @IsNotEmpty()
-    @IsString()
-    osId:string
+    @Type(() => Number)
+    osType: OSType
+    @ApiProperty({
+        type:String,
+        description:"Version of the OS",
+        example:11
+    })
+    // @IsNotEmpty()
+    // @IsString()
+    // osId:string
 
     //Api property type of the deviceType
     @ApiProperty({
@@ -106,6 +106,15 @@ export class DeviceDTO {
     @IsEnum(BrandName)
     @IsNotEmpty()
     brand: BrandName;
+
+    @ApiProperty({
+        type:String,
+        description:"Version of the OS",
+        example:"24.04"
+    })
+    @IsNotEmpty()
+    @IsString()
+    osVersion:string;
 }
 
 export class DeviceCount extends PickType(DeviceDTO, ["deviceType", "deviceStatus"]) {

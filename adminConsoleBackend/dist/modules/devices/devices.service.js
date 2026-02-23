@@ -18,8 +18,10 @@ const device_mapper_1 = require("./mapper/device.mapper");
 const enum_config_1 = require("../../config/enum.config");
 let DeviceService = class DeviceService {
     deviceRepository;
-    constructor(deviceRepository) {
+    osService;
+    constructor(deviceRepository, osService) {
         this.deviceRepository = deviceRepository;
+        this.osService = osService;
     }
     logger = new common_1.Logger();
     async allDevices(query) {
@@ -39,10 +41,17 @@ let DeviceService = class DeviceService {
     }
     async createDevice(deviceDto) {
         try {
+            let checkDevice = await this.checkDeviceExists(deviceDto.serialNumber, deviceDto.hostName);
+            if (checkDevice.exists) {
+                throw new Error(checkDevice.message);
+            }
+            let osInfo = await this.osService.osInfoByVersion(deviceDto.osVersion, deviceDto.osType);
+            if (!osInfo)
+                throw new Error("OS not found");
             deviceDto.userId ? deviceDto.deviceStatus = enum_config_1.DeviceStatus.Active : deviceDto.deviceStatus = enum_config_1.DeviceStatus.Dead;
-            let deviceEntity = device_mapper_1.DeviceMapper.mapToEntity(deviceDto);
+            let deviceEntity = device_mapper_1.DeviceMapper.mapToEntity({ ...deviceDto, ...osInfo });
             deviceEntity = await this.deviceRepository.insertDevice(deviceEntity);
-            let res = device_mapper_1.DeviceMapper.mapToDto(deviceEntity);
+            let res = device_mapper_1.DeviceMapper.mapToDeviceDto(deviceEntity);
             return Promise.resolve(res);
         }
         catch (error) {
@@ -101,10 +110,13 @@ let DeviceService = class DeviceService {
     }
     async updateDevice(body) {
         try {
-            let deviceEntity = device_mapper_1.DeviceMapper.mapToEntity(body);
+            let osInfo = await this.osService.osInfoByVersion(body.osVersion, body.osType);
+            if (!osInfo)
+                throw new Error("OS not found");
+            let deviceEntity = device_mapper_1.DeviceMapper.mapToEntity({ ...body, ...osInfo });
             let res = await this.deviceRepository.updateDevice(deviceEntity);
             let device;
-            device = device_mapper_1.DeviceMapper.mapToDto(res);
+            device = device_mapper_1.DeviceMapper.mapToDeviceDto(res);
             return Promise.resolve(device);
         }
         catch (error) {
@@ -131,7 +143,23 @@ let DeviceService = class DeviceService {
             return Promise.resolve("Bitlocker Added Successfully");
         }
         catch (error) {
-            this.logger.error("This error occurred in DeviceService. Method Name: addBitlockerKry", error);
+            this.logger.error("This error occurred in DeviceService. Method Name: addBitlockerKey", error);
+            return Promise.reject(error);
+        }
+    }
+    async checkDeviceExists(serialNumber, hostName) {
+        try {
+            let res = await this.deviceRepository.getDeviceInfoByHostOrSerial(serialNumber, hostName);
+            if (res && res.serialNumber == serialNumber) {
+                return Promise.resolve({ exists: true, message: "Device Already exists with the same serial number." });
+            }
+            else if (res && res.hostName == hostName) {
+                return Promise.resolve({ exists: true, message: "Device Already exists with the same host name." });
+            }
+            return Promise.resolve({ exists: false, message: "" });
+        }
+        catch (error) {
+            this.logger.error("This error occurred in DeviceService. Method Name: checkDeviceExists", error);
             return Promise.reject(error);
         }
     }
@@ -140,6 +168,7 @@ exports.DeviceService = DeviceService;
 exports.DeviceService = DeviceService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)("IDeviceRepository")),
-    __metadata("design:paramtypes", [Object])
+    __param(1, (0, common_1.Inject)("IOSInfoService")),
+    __metadata("design:paramtypes", [Object, Object])
 ], DeviceService);
 //# sourceMappingURL=devices.service.js.map

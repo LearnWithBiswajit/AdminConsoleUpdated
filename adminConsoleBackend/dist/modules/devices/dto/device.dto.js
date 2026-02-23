@@ -27,6 +27,7 @@ class DeviceDTO {
     hostName;
     serialNumber;
     brand;
+    osVersion;
 }
 exports.DeviceDTO = DeviceDTO;
 __decorate([
@@ -51,6 +52,11 @@ __decorate([
     __metadata("design:type", Number)
 ], DeviceDTO.prototype, "osType", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)({
+        type: String,
+        description: "Version of the OS",
+        example: 11
+    }),
     (0, swagger_1.ApiProperty)({
         enum: enum_config_1.DeviceType,
         description: "Device Type of the device in number: Others = 1, Mobile = 2",
@@ -123,7 +129,17 @@ __decorate([
     (0, class_validator_2.IsNotEmpty)(),
     __metadata("design:type", Number)
 ], DeviceDTO.prototype, "brand", void 0);
-class DeviceCount extends (0, swagger_1.PickType)(DeviceDTO, ["deviceType", "deviceStatus", "osType"]) {
+__decorate([
+    (0, swagger_1.ApiProperty)({
+        type: String,
+        description: "Version of the OS",
+        example: "24.04"
+    }),
+    (0, class_validator_2.IsNotEmpty)(),
+    (0, class_validator_2.IsString)(),
+    __metadata("design:type", String)
+], DeviceDTO.prototype, "osVersion", void 0);
+class DeviceCount extends (0, swagger_1.PickType)(DeviceDTO, ["deviceType", "deviceStatus"]) {
     count;
 }
 exports.DeviceCount = DeviceCount;

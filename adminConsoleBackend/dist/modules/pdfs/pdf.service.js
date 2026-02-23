@@ -36,7 +36,7 @@ let PdfService = class PdfService {
             doc.image(imagePath, 235, 20, { width: 120 });
             doc.moveDown(1);
             let device = await this.deviceRepository.getDeviceById(id);
-            let resp = device_mapper_1.DeviceMapper.mapToDto(device);
+            let resp = device_mapper_1.DeviceMapper.mapToDeviceDto(device);
             doc.fontSize(14).font('Helvetica-Bold').text('ARC System Requisition Form', { align: "center", underline: true });
             doc.moveDown(1);
             const box = (label, val = '', width = 400) => {

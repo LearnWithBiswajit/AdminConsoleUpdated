@@ -10,11 +10,15 @@ import { DeviceService } from "../devices/devices.service";
 import { DevicesModule } from "../devices/devices.module";
 import { DeviceRepository } from "../devices/devices.repository";
 import { DeviceUsageHistory } from "../devices/entities/deviceHistory.entity";
+import { OSInfoModule } from "../osInfo/osInfo.module";
 
 @Module({
-imports:[TypeOrmModule.forFeature([UsersAssets, Device, User, DeviceUsageHistory]), DevicesModule],
+imports:[TypeOrmModule.forFeature([UsersAssets, Device, User, DeviceUsageHistory]), DevicesModule, OSInfoModule],
 controllers:[UsersDevicesController],
-providers:[{provide:"IUserDevicesService", useClass: UserDevicesService},{provide:"IUsersDevicesRepository", useClass: UsersDevicesRepository}, {provide:"IDevicesService", useClass:DeviceService}, {provide:"IDeviceRepository", useClass:DeviceRepository}],
-exports:[UserDeviceMapper, {provide:"IUsersDevicesRepository", useClass:UsersDevicesRepository},]
+providers:[{provide:"IUserDevicesService", useClass: UserDevicesService},{provide:"IUsersDevicesRepository", useClass: UsersDevicesRepository},
+    // {provide:"IDevicesService", useClass:DeviceService}, {provide:"IDeviceRepository", useClass:DeviceRepository}
+    
+],
+exports:["IUserDevicesService","IUsersDevicesRepository", {provide:"IUsersDevicesRepository", useClass:UsersDevicesRepository},]
 })
 export class UserDeviceMapper{}

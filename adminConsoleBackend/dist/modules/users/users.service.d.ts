@@ -18,4 +18,5 @@ export declare class UsersService implements IUserService {
     updateEmployee(body: UpdateUserDTO): Promise<UserDTO>;
     updateToAdmin(body: UpdateUserDTO, userInfo: User): Promise<Record<string, string>>;
     revokeAdminPermission(body: UpdateUserDTO, userInfo: User): Promise<Record<string, string>>;
+    registerAppUser(userInfo: CreateUserDTO): Promise<UserDTO>;
 }

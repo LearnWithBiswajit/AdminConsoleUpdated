@@ -10,6 +10,7 @@ export declare class DeviceDTO {
     hostName: string;
     serialNumber: string;
     brand: BrandName;
+    osVersion: string;
 }
 declare const DeviceCount_base: any;
 export declare class DeviceCount extends DeviceCount_base {

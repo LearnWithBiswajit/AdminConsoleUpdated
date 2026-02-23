@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a, _b, _c, _d, _e, _f, _g, _h;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsersController = void 0;
 const common_1 = require("@nestjs/common");
@@ -97,6 +97,15 @@ let UsersController = class UsersController {
         }
         catch (error) {
             this.logger.error("This error occurred in UserController. Method Name: revokeAdminPermission", error);
+            return Promise.reject(error);
+        }
+    }
+    async registerAppUser(body) {
+        try {
+            return Promise.resolve(this.usersService.registerAppUser(body));
+        }
+        catch (error) {
+            this.logger.error("This error occurred in UserController. Method Name: registerAppUser", error);
             return Promise.reject(error);
         }
     }
@@ -201,6 +210,15 @@ __decorate([
     __metadata("design:paramtypes", [user_entity_1.User, create_user_dto_1.UpdateUserDTO]),
     __metadata("design:returntype", typeof (_h = typeof Promise !== "undefined" && Promise) === "function" ? _h : Object)
 ], UsersController.prototype, "revokeAdminPermission", null);
+__decorate([
+    (0, common_1.Post)("/create"),
+    (0, common_1.Version)("2"),
+    (0, publicRoute_decorator_1.Public)(),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [create_user_dto_1.CreateUserDTO]),
+    __metadata("design:returntype", typeof (_j = typeof Promise !== "undefined" && Promise) === "function" ? _j : Object)
+], UsersController.prototype, "registerAppUser", null);
 exports.UsersController = UsersController = __decorate([
     (0, swagger_1.ApiTags)("Users"),
     (0, common_1.Controller)('users'),

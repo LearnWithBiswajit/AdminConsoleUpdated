@@ -17,6 +17,7 @@ import { PdfModule } from './modules/pdfs/pdf.module';
 import { ConfigModule } from '@nestjs/config';
 import { UsersAssets } from './modules/UserDevices/entities/user_devices.entity';
 import { AppUser } from './modules/users/entities/appUser.entity';
+import { OSInfoModule } from './modules/osInfo/osInfo.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { AppUser } from './modules/users/entities/appUser.entity';
     UsersModule,
     AuthModule,
     PdfModule,
+    OSInfoModule,
     TypeOrmModule.forFeature([User, Device, DeviceUsageHistory, UsersAssets, AppUser])
   ],
   controllers: [AppController],

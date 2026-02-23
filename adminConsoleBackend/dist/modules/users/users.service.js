@@ -134,6 +134,18 @@ let UsersService = class UsersService {
             return Promise.reject(error);
         }
     }
+    async registerAppUser(userInfo) {
+        try {
+            let user = user_mapper_1.UserMapper.mapToAppEntity(userInfo);
+            user = await this.userRepository.createAppUser(user);
+            let createdUser = user_mapper_1.UserMapper.mapToAppDTO(user);
+            return Promise.resolve(createdUser);
+        }
+        catch (error) {
+            this.logger.error("This error occurred in UserService. Method Name: registerAppUser", error);
+            return Promise.reject(error);
+        }
+    }
 };
 exports.UsersService = UsersService;
 exports.UsersService = UsersService = __decorate([

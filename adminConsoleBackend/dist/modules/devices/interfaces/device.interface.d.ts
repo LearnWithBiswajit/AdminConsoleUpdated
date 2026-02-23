@@ -5,13 +5,14 @@ import { Device } from "../entities/device.entity";
 import { UUID } from "crypto";
 import { DeviceUsageHistory } from "../entities/deviceHistory.entity";
 import { User } from "src/modules/users/entities/user.entity";
+import { OSInfo } from "src/modules/osInfo/entities/osInfo.entity";
 export interface IDeviceRepository {
-    findAllDevices(query: QueryDevices): Promise<Device[]>;
+    findAllDevices(query: QueryDevices): Promise<Device[] & OSInfo[]>;
     insertDevice(deviceEntity: Device): Promise<Device>;
     updateDeviceStatus(updateDeviceEntity: Device, deviceIds?: UUID[]): Promise<number>;
     findTotalCountByStatusAndDeviceType(deviceStatus: DeviceStatus, deviceType: DeviceType, osType: OSType, flag?: boolean, searchString?: string): Promise<DeviceCount[] | number>;
     insertDeviceHistory(deviceInfo: DeviceUsageHistory[]): Promise<any>;
-    getInventory(page: number, limit: number, searchString?: string): Promise<(Device & User)[]>;
+    getInventory(page: number, limit: number, searchString?: string): Promise<(Device & User & OSInfo)[]>;
     getInventoryCount(searchString?: string): Promise<{
         TotalCount: number;
     }>;
@@ -20,6 +21,7 @@ export interface IDeviceRepository {
     updateDevice(body: Device): Promise<Device>;
     markAsDeadDevice(deviceId: UUID): Promise<number>;
     addBitlockerKey(info: BitLockerAndRecovaryKey): Promise<number>;
+    getDeviceInfoByHostOrSerial(serialNumber: string, hostName: string): Promise<Device | null>;
 }
 export interface IDevicesService {
     allDevices(query: QueryDevices): Promise<Record<string, object>>;

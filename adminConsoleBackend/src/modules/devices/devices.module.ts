@@ -6,12 +6,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Device } from './entities/device.entity';
 import { DeviceUsageHistory } from './entities/deviceHistory.entity';
 import { OSInfo } from '../osInfo/entities/osInfo.entity';
+import { OSInfoModule } from '../osInfo/osInfo.module';
 
 @Module({
-  imports:[TypeOrmModule.forFeature([Device, DeviceUsageHistory, OSInfo])],
+  imports:[TypeOrmModule.forFeature([Device, DeviceUsageHistory, OSInfo]), OSInfoModule],
   controllers: [DevicesController],
-  providers: [{provide:"IDeviceService", useClass:DeviceService}, {provide:"IDeviceRepository", useClass:DeviceRepository}],
-  exports:[DevicesModule, TypeOrmModule.forFeature([OSInfo])]
+  providers: [{provide:"IDevicesService", useClass:DeviceService}, {provide:"IDeviceRepository", useClass:DeviceRepository}],
+  exports:["IDevicesService","IDeviceRepository", TypeOrmModule.forFeature([OSInfo])]
 })
 export class DevicesModule {}
  

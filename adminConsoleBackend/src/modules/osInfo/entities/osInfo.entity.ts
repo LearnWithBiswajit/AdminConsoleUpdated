@@ -11,4 +11,6 @@ export class OSInfo{
     osName:string;
     @Column({name:"OSVersion", nullable:false, type:"varchar"})
     osVersion:string;
+    @Column({name:"IsActive", nullable:false, type:"tinyint"})
+    isActive:boolean;
 }

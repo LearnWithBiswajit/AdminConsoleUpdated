@@ -7,7 +7,7 @@ import { OSInfo } from "src/modules/osInfo/entities/osInfo.entity";
 import { OSInfoDto } from "src/modules/osInfo/dtos/osInfo.dto";
 
 export class DeviceMapper{
-    public static mapToEntity(deviceDto:Partial<DeviceDTO>):Device{
+    public static mapToEntity(deviceDto:Partial<DeviceDTO>&Partial<OSInfoDto>):Device{
         let deviceEntity = new Device();
         let osInfo = new OSInfo();
 
@@ -42,10 +42,11 @@ export class DeviceMapper{
         return {...deviceDto, ...osInfoDto};
     }
 
-    public static mapToDeviceDto(deviceEntity:Device):DeviceDTO{
+    public static mapToDeviceDto(deviceEntity:Device):DeviceDTO&OSInfoDto{
         let deviceDto = new DeviceDTO();
+        let osInfoDto = new OSInfoDto();
         deviceDto.id = deviceEntity.id as UUID;
-        deviceDto.osId = deviceEntity.osId;
+        osInfoDto.osId = deviceEntity.osId;
         deviceDto.deviceType = deviceEntity.deviceType;
         // deviceDto.userId = deviceEntity.userId;
         deviceDto.deviceStatus = deviceEntity.deviceStatus;
@@ -55,7 +56,7 @@ export class DeviceMapper{
         deviceDto.brand = deviceEntity.brand;
         deviceDto["bitlockerId"] = deviceEntity.bitlockerId;
         deviceDto["recoveryKey"] = deviceEntity.recoveryKey;
-        return deviceDto;
+        return {...deviceDto, ...osInfoDto};
     }
 
     public static mapToInventory(res:Device&User&OSInfoDto):Inventory{

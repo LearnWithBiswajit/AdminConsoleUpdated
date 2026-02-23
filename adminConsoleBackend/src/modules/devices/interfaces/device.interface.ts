@@ -23,6 +23,7 @@ export interface IDeviceRepository {
     updateDevice(body: Device): Promise<Device>;
     markAsDeadDevice(deviceId:UUID):Promise<number>;
     addBitlockerKey(info:BitLockerAndRecovaryKey):Promise<number>;
+    getDeviceInfoByHostOrSerial(serialNumber:string, hostName:string):Promise<Device | null>;
     // bitlockerByDeviceId(deviceId:UUID):Promise<Device|null>;
 }
 

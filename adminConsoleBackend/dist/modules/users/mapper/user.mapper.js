@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserMapper = void 0;
 const user_dto_1 = require("../dto/user.dto");
+const appUser_entity_1 = require("../entities/appUser.entity");
 const user_entity_1 = require("../entities/user.entity");
 class UserMapper {
     static mapToEntity(userDto) {
@@ -35,6 +36,26 @@ class UserMapper {
         userDto.email ? userEntity.email = userDto.email : null;
         userDto.password ? userEntity.password = userDto.password : null;
         return userEntity;
+    }
+    static mapToAppEntity(userDto) {
+        const userEntity = new appUser_entity_1.AppUser();
+        userEntity.userId = userDto.userId;
+        userEntity.employeeId = userDto.employeeId;
+        userEntity.firstName = userDto.firstName;
+        userEntity.middleName = userDto.middleName;
+        userEntity.lastName = userDto.lastName;
+        userEntity.email = userDto.email;
+        return userEntity;
+    }
+    static mapToAppDTO(userEntity) {
+        const userDto = new user_dto_1.UserDTO();
+        userDto.userId = userEntity.userId;
+        userDto.employeeId = userEntity.employeeId;
+        userDto.firstName = userEntity.firstName;
+        userDto.middleName = userEntity.middleName;
+        userDto.lastName = userEntity.lastName;
+        userDto.email = userEntity.email;
+        return userDto;
     }
 }
 exports.UserMapper = UserMapper;

@@ -14,7 +14,7 @@ const enum_config_1 = require("../../../config/enum.config");
 const typeorm_1 = require("typeorm");
 let Device = class Device {
     id;
-    osType;
+    osId;
     deviceType;
     deviceStatus;
     macAddress;
@@ -31,9 +31,9 @@ __decorate([
     __metadata("design:type", String)
 ], Device.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: "OSType", nullable: false, default: enum_config_1.OSType.Linux }),
-    __metadata("design:type", Number)
-], Device.prototype, "osType", void 0);
+    (0, typeorm_1.Column)({ name: "OSId", nullable: false }),
+    __metadata("design:type", String)
+], Device.prototype, "osId", void 0);
 __decorate([
     (0, typeorm_1.Column)({ name: "DeviceType", nullable: false, default: enum_config_1.DeviceType.Others }),
     __metadata("design:type", Number)
