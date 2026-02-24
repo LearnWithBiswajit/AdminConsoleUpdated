@@ -26,3 +26,16 @@ services:
       - DB_USER=root
       - DB_PASSWORD=root
       - DB_NAME=AdminConsole
+    depends_on:
+      - db
+  db:
+    image: mysql:9.3.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: AdminConsole
+    ports:
+      - "3307:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./db:/docker-entrypoint-initdb.d

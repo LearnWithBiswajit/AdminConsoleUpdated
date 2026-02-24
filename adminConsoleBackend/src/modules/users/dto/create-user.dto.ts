@@ -6,7 +6,7 @@ import { UUID } from "crypto";
 
 export class CreateUserDTO {
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
     userId: UUID;
 
