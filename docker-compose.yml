@@ -4,7 +4,7 @@ services:
       context: ./adminconsole
       dockerfile: Dockerfile
       args:
-        REACT_APP_API_BASE_URL: http://10.10.87.41:3030/api/
+        REACT_APP_API_BASE_URL: http://10.10.85.32:3030/api/
     image: admin_console_frontend
     environment:
       - REACT_APP_API_BASE_URL=http://admin_console_backend:3030/api/
@@ -21,8 +21,8 @@ services:
     ports:
       - "3030:3000"
     environment:
-      - DB_HOST=10.10.87.41
-      - DB_PORT=3307
+      - DB_HOST=10.10.85.32
+      - DB_PORT=3306
       - DB_USER=root
       - DB_PASSWORD=root
       - DB_NAME=AdminConsole
