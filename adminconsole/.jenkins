@@ -1,0 +1,31 @@
+pipeline {
+agent any    
+stages {
+stage("Copy from local"){
+steps{
+sshagent(credentials: ['hostssh']){
+sh '''ssh o StrictHostKeyChecking=no surodoym@10.10.84.203 "
+rm rf ~/Documents/AdminConsole/adminconsole/node_modules &&                            
+rm rf ~/Documents/AdminConsole/adminConsoleBackend/node_modules/ &&                            
+rm rf ~/Documents/AdminConsole/adminConsoleBackend/dist/ &&                            
+scp r ~/Documents/AdminConsole/* surodoy@10.10.85.32:/home/surodoy/AdminConsoleUpdated/"
+'''                
+}            
+}}        
+stage("Deploy in Docker") {
+steps {
+sshagent (credentials: ['externalssh']) {                    
+    sh '''ssh o StrictHostKeyChecking=no surodoy@10.10.85.32 "
+    cd /AdminConsoleUpdated/ &&
+    rm rf adminconsole/.env && 
+    rm rf adminConsoleBackend/.env && 
+    ./dockerdown.sh && 
+    docker compose f dockercompose.yml up d"
+    '''                
+    }            
+    }
+    }    
+    }
+    }
+    
+    // Existing working pipelinepipeline {    agent any    stages {        stage("Copy from local"){            steps{                sshagent(credentials: ['hostssh']){                    sh '''                        ssh o StrictHostKeyChecking=no surodoym@10.10.84.203 "                            rm rf ~/Documents/AdminConsole/adminconsole/node_modules &&                            rm rf ~/Documents/AdminConsole/adminConsoleBackend/node_modules/ &&                            rm rf ~/Documents/AdminConsole/adminConsoleBackend/dist/ &&                            scp r ~/Documents/AdminConsole/* surodoy@10.10.85.32:/home/surodoy/AdminConsoleUpdated/                        "                    '''                }            }        }        stage("Deploy in Docker") {            steps {                sshagent (credentials: ['externalssh']) {                    sh '''                        ssh o StrictHostKeyChecking=no surodoy@10.10.85.32 "                            cd /AdminConsoleUpdated/ &&                             rm rf adminconsole/.env &&                             rm rf adminConsoleBackend/.env &&                             ./dockerdown.sh &&                             docker compose f dockercompose.yml up d                        "                    '''                }            }        }    }}

@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoginResponse = void 0;
+class LoginResponse {
+    accessToken;
+    refreshToken;
+}
+exports.LoginResponse = LoginResponse;
+//# sourceMappingURL=loginResponse.dto.js.map

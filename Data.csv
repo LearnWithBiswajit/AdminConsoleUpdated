@@ -1,0 +1,382 @@
+﻿SL. No.,Name,Email ID,Device Type,MAC address ,Host Name,OS Type,Serial Number,Brand Name,Brand Numeric,OS Type Numeric,Status
+1,Abbas Hussain,abbas.hussain@e-arc.com,Laptop,18-CC-18-80-11-00 ,INDLAPTOP677,Windows,5CG10408DM,HP,1,3,1
+2,Abir Chattaraj,abir.chattaraj@e-arc.com,Laptop,B4-69-21-2B-A8-13   E4-B9-7A-39-B9-BC,INDLAPTOP330,Windows,6QZDMQ2,DELL,3,3,1
+3,Amit Chakraborty ,amit.t.chakraborty@e-arc.com,Desktop,3C-52-82-61-87-1E,INDHYPERLNK1,Windows,INA810TVBF,HP,1,3,1
+4,Anjali Kumari,anjali.kumari@e-arc.com,Laptop,4C-77-CB-5C-72-18  F4-EE-08-DF-3B-2D     4C-77-CB-5C-72-1C,INDLAPTOP827,Windows,JJX8QG3,DELL,3,3,1
+5,Anoop Kumar,anoop.kumar@e-arc.com,Laptop,"FC-3F-DB-5B-0C-67   
+A8-A7-95-42-D0-BD ",INDLAPTOP786,Windows,CND5513V14,HP,1,3,1
+6,Arif Hasan,arif.hasan@e-arc.com,Laptop,C8-F7-50-41-39-B2             D0-C6-37-74-DC-4F,INDLAPTOP746,Windows,DYHPVT2,DELL,3,3,1
+7,Aritra Kar,aritra.kar@e-arc.com,Desktop,"80-2B-F9-2A-D6-DA 
+10-E7-C6-4C-BB-39   
+80-2B-F9-2A-D6-D9",INDTAPP315,Windows,4CE8451K2C,HP,1,3,1
+8,Aritra Mitra / Rittika Acharjee,aritra.mitra@e-arc.com,Laptop,F4-B7-E2-05-C4-AD                 B4-B5-2F-84-5C-2A,INDLAPTOP690,Windows,INA328T2H2,HP,1,3,1
+9,Arpan Mitra / Joyeeta Majumdar,arpan.mitra@e-arc.com,Desktop,A0-8C-FD-CB-D8-A2,INDHYPERLNK6,Windows,INA738YTKV,HP,1,3,1
+10,Arup Mitra,arup.mitra@e-arc.com,Laptop,"48-5A-B6-9C-CA-55 
+A0-1D-48-AB-96-5E",INDLAPTOP833,Windows,2CE40300VZ,HP,1,3,1
+11,Asish Kumar Barman,asish.barman@e-arc.com,Laptop,"F4-A4-75-4D-5D-AA   
+F4-A4-75-4D-5D-AE",INDLAPTOP698,Windows,R914V5Y0R9,LENOVO,4,3,1
+12,Bibek Chatterjee,bibek.chatterjee@e-arc.com,Laptop,"F4-A4-75-43-80-B9      
+F4-A4-75-43-80-BD  ",INDLAPTOP876,Windows,R914V605,LENOVO,4,3,1
+13,Chittaranjan Nimmala,chittaranjan.nimmala@e-arc.com,Laptop,"34-E1-2D-F0-DC-14  
+34-E1-2D-F0-DC-18   
+",INDLAPTOP661,Windows,5CD8358CMN,HP,1,3,1
+14,Amit Kumar Singh ,t.amit.singh@e-arc.com,Laptop,AC-91-A1-6B-C5-C8           28-C5-D2-95-64-29           28-C5-D2-95-64-2D,INDLAPTOP238,Windows,FLLKY04,DELL,3,3,1
+15,Ekata Ghosh,ekata.ghosh@e-arc.com,Desktop,70-5A-0F-49-EE-19,INDHYPERLNK7,Windows,INA738YTL4,HP,1,3,1
+16,ahel yadav,ahel.yadav@e-arc.com,Laptop,38-63-BB-72-84-2A             10-08-B1-3A-BC-61               10-08-B1-3A-BC-62,INDLAPTOP752,Windows,INA811V5WQ,HP,1,3,1
+17,vishal kumar,vishal.kumar@e-arc.com,Laptop,"A0-8C-FD-A1-8A-01  
+96-8E-B4-D0-8F-46",INDLAPTOP510,Windows,5CG62441HT,HP,1,3,1
+18,Jayanta Kumar Mukherjee,jayanta.mukherjee@e-arc.com,Laptop,DC-21-48-F5-DF-A7,INDLAPTOP949,Linux,5CG1437H1W,HP,1,1,1
+19,Kajori Sarkar,kajori.sarkar@e-arc.com,MAC-Mini,DC-21-48-F5-DF-A9,INKOMAC35,MAC,C07XJ2SDJYVX,APPLE ,2,2,1
+20,Kalyan Mahapatra,kalyan.mahapatra@e-arc.com,Desktop,3C-52-82-55-A4-E9,INDHYPERLNK12,Windows,INA810TV9Y,HP,1,3,1
+21,Kankana Ghosh,kankana.ghosh@e-arc.com,Laptop,"48-0F-CF-DB-E3-B1 
+0C-0E-76-1C-0D-79",INDLAPTOP785,Windows,CND5203LSP,HP,1,3,1
+22,Koushik Dey / Atishkumar Ray,koushik.dey@e-arc.com,Laptop,"7C-B0-C2-72-E5-57  
+40-B0-34-E2-1F-F0   
+7C-B0-C2-72-E5-5B",INDLAPTOP678,Windows,5CG7077G02,HP,1,3,1
+23,Manas Maity,manas.maity@e-arc.com,MAC-Mini,A4:77:F3:00:33:DF              A4:77:F3:06:DB:B4,INKOMAC015,MAC,C07JY0EZQ6E0,APPLE,2,2,1
+24,Md Rabiul Mahtab,rabiul.mahtab@e-arc.com,MAC-Mini,AC-91-A1-6B-C5-DF           28-C5-D2-99-E6-F7             28-C5-D2-99-E6-FB,INDLAPTOP231,Windows,136.00000004,DELL,3,3,1
+25,Md. Tahsin Ansari,tahsin.ansari@e-arc.com,Laptop, ,INDLAPTOP820,Linux,HDKBQG3,DELL,3,1,1
+26,Monish Singh Thakur,monish.thakur@e-arc.com,Laptop,  AC-91-A1-67-23-66                                   AC-91-A1-67-23-66                                      E4-60-17-DC-BE-04,INDLAPTOP212,Windows,FXH0QV3,DELL,3,3,1
+27,Mullapudi Anvesh,mullapudi.anvesh@e-arc.com,Laptop,"B4-B6-86-D7-0D-7F  0C-54-15-E6-61-85
+",INDLAPTOP658,Windows,5CD8213ZX1,HP,1,3,1
+28,Niladri Sengupta,niladri.sengupta@e-arc.com,Laptop,"F4-A4-75-4E-7A-37  
+F4-A4-75-4E-7A-3B  
+00-FF-39-57-09-E7",INDLAPTOP707,Windows,R914V6BS,LENOVO,4,3,1
+29,Payel Banerjee,payel.banerjee@e-arc.com,Laptop,F4-D1-08-12-9A-2B  F4-D1-08-12-9A-2F B0-0C-D1-C8-9C-F9,INDLAPTOP504,Windows,5CG90554RB,HP,1,3,1
+30,Rohit Chatterjee,rohit.chatterjee@e-arc.com,Laptop,"A0-8C-FD-2E-74-D8   
+74-DF-BF-C4-71-A3",INDLAPTOP670,Windows,5CD6235XRW,HP,1,3,1
+31,"Rajarshi Kumar Chakrabarti
+","rajarshi.chakrabarti
+@e-arc.com",Laptop,9C-7B-EF-9C-2C-27            A8-6D-AA-51-62-87           A8-6D-AA-51-62-83 ,INDLAPTOP784,Windows,5CG9190P58,HP,1,3,1
+32,Rajeev Dixit,rajeev.dixit@e-arc.com,Laptop,D4-81-D7-F3-33-F6             AC-ED-5C-DA-A6-1F,INDLAPTOP981,Windows,1XFFG2,DELL,3,3,1
+33,Raktim Saha \ Anupam das,raktim.saha@e-arc.com,Desktop,40-B0-34-47-20-18,INDHYPERLNK10,Windows,INA821ZCMR,HP,1,3,1
+34,Ranjan Bera,ranjan.bera@e-arc.com,Laptop, 28-C5-D2-99-C1-D1                   AC-91-A1-6B-C6-7D                   28-C5-D2-99-C1-D5,INDLAPTOP243,Windows,9D1MY04,DELL,3,3,1
+35,Partha Pratim Pal,rohit.chatterjee@e-arc.com,,88-51-FB-58-7E-52,INDTAPPL224-001,Windows,IND342YPPT,HP,1,3,1
+36,Security Team,rupanjana.das@e-arc.com,MAC-Mini,78-7B-8A-C1-3F-82            8C-85-90-F1-87-A4,INKOMAC019,Windows,C07VP0VQG1HW,APPLE,2,3,1
+37,Samiran Roy,samiran.roy@e-arc.com,Laptop,"B4-45-06-13-7B-45
+1C-C1-0C-D8-00-36
+1C-C1-0C-D8-00-3A",INDLAPTOP748,Windows ,3GPSRG3,DELL,3,,1
+38,Santanu Pal,santanu.pal@e-arc.com,Laptop,"1C-C1-0C-D7-FE-B5   
+B4-45-06-13-7A-E9   
+1C-C1-0C-D7-FE-B9 ",INDLAPTOP688,Windows,2GPSRG3,DELL,3,3,1
+39,Sayan Basu,sayan.basu@e-arc.com,Laptop,"DC-21-48-F6-2D-9A  
+DC-21-48-F6-2D-9E",INKOLW647SAYANB,Windows,5CG1435DV4,HP,1,3,1
+40,Sayantan Kumar Laha,sayantan.laha@e-arc.com,Laptop,"D0-C6-37-D7-9C-E5
+10-65-30-6E-7C-0B",INDLAPTOP896,Windows,578.0QVT2,DELL,3,3,1
+41,Shashank Dhirendra Kumar Yadav,shashank.yadav@e-arc.com,Laptop,0c:54:15:e6:36:83,INDLAPTOP451,Linux,5CD8213ZY2,HP,1,1,1
+42,Sonu Gupta,sonu.gupta@e-arc.com,Laptop,AC-91-A1-6B-C6-77          28-C5-D2-99-E7-33            28-C5-D2-99-E7-37 ,INDLAPTOP244,Windows,2D1MY04,DELL,3,3,1
+43,Bhanu Pratap ,bhanu.pratap@e-arc.com,MACBook,"9c:3e:53:86:b2:65
+36:4b:2c:d3:79:c0",INKOMAC001,MAC,J6Q174JLY0,APPLE,2,2,1
+44,NIPUN SHAW/BHUMIKA RAJ,t.nipun.shaw@e-arc.com,Desktop,"58-A0-23-DF-1F-47   
+18-60-24-A4-27-1B",INDHYPERLNK13,Windows,INA921SK6F,HP,1,3,1
+45,Subhadeep Sarkar,subhadeep.sarkar@e-arc.com,Laptop,"7C-B0-C2-72-E5-11   
+40-B0-34-E2-EE-7C  
+7C-B0-C2-72-E5-15",INDLAPTOP350,Windows,5CG7077GMY,HP,1,3,1
+46,Subhasis Chanda,subhasis.chanda@e-arc.com,Laptop,"DC-21-48-F5-CF-F8   
+00-E0-4C-68-5B-0F",INDLAPTOP687,Windows,5CG1437H21,HP,1,3,1
+47,Sujoy Saw,sujoy.saw@e-arc.com,Laptop,50-65-F3-07-D4-15          34-68-95-33-E9-B5            34-68-95-33-E9-B6 ,INDLAPTOP972,Windows,INA308XKLX,HP,1,3,1
+48,Sukanta Kumar Mohapatra,sukanta.mohapatra@e-arc.com,Laptop,"F4-EE-08-E1-4C-E6   
+ 1C-C1-0C-DC-D8-2C   1C-C1-0C-DC-D8-30 ",INDLAPTOP905,Windows,DHKBQG3,DELL,3,3,1
+49,Suman Banerjee,suman.banerjee@e-arc.com,Desktop,40-B0-34-47-25-9A  ,INDHYPERLNK2,Windows,INA810TV16,HP,1,3,1
+50,Suman Das,suman.das@e-arc.in,Laptop,"7C-70-DB-0C-55-85   
+7C-70-DB-0C-55-89",INDLAPTOP686,Windows,5CG1437GQK,HP,1,3,1
+51,Sunny Kumar,sunny.kumar@e-arc.in,Laptop,DC-21-48-F9-94-6B        DC-21-48-F9-95-6F             B4-B0-24-91-BB-7D,INDLAPTOP964,Windows,5CG1435DVJ,HP,1,3,1
+52,Supravat Maiti,supravat.maiti@e-arc.com,Laptop,2c:6d:c1:51:e3:43,INDLAPTOP926,Linux,C8ZS9K3,DELL ,3,1,1
+53,Sushant Chandan,sushant.chandan@e-arc.com,Laptop,"F4-EE-08-E1-50-64
+1C-C1-0C-DC-76-CA ",INDLAPTOP801,Windows,8GKBQG3,DELL,3,3,1
+54,Susovan Das / Harpinder Singh,susovan.das@e-arc.com,Desktop,40-B0-34-3D-7C-FA ,INDHYPERLNK14,Windows,INA810TV49,HP,1,3,1
+55,Swarup Khanra,Swarup.Khanra@e-arc.com,Laptop,"00-FF-EF-88-79-CC   
+00-50-56-C0-00-01  
+00-50-56-C0-00-08   
+EC-8E-B5-9C-24-7F  
+A4-02-B9-41-07-DF   
+A4-02-B9-41-07-E3 ",INDLAPTOP461,Windows,5CG631KXD,HP,1,3,1
+56,Tanushree Dutta,tanushree.dutta@e-arc.com,Laptop,74-46-A0-AC-24-59,INDTAPPL313,Windows,INA342YPPZ,HP,1,3,1
+57,Subhamoy Maity,Subhamoy.Maity@e-arc.com,Laptop,28-C5-D2-99-98-D7              AC-91-A1-6B-C5-C5            28-C5-D2--99-98-DB,INDLAPTOP898,Windows,,DELL,3,3,1
+58,Krishna Paul,Krishna Paul,Laptop,94:57:A5:B1:C3:D2,INDLAPTOP456,Windows,CND5346M8L,HP,1,3,1
+59,Varun Singh,varun.singh@e-arc.com,Desktop,A0-8C-FD-CB-D8-FB,INDHYPERLNK5,Windows,NAINA738YXK7,HP,1,3,1
+60,Susanta Das,susanta.das@e-arc.com,Laptop,A8-6D-AA-B3-D6-E7              80-E8-2C-54-11-C3                                     A8-6D-AA-B3-D6-E3,INDLAPTOP956,Windows,5CG92182VB,HP,1,3,1
+61,Vishal Khosla,vishal.khosla@e-arc.com,Laptop,"1C-C1-0C-D7-FF-2D   
+B4-45-06-13-7A-DB   
+0A-00-27-00-00-13",INDLAPTOP750,Windows,3FPSRG3,DELL,3,3,1
+62,Sudhanshu Kumar,t.sudhanshu.kumar@e-arc.com,Laptop,"00-FF-9F-85-25-B9  
+A8-B1-3B-8F-AB-FB   
+30-03-C8-95-C3-E7   ",INDLAPTOP897,Windows,5CG1437H18,HP,1,3,1
+63,Sayan dey,sayan.dey@e-arc.com,Laptop,E4:60:17:DC:D1:BF                          AC:91:A1:67:1E:D7                     E4:60:17:DC:D1:C3                                     ,INDLAPTOP214,Windows,B5CPSV3,DELL,3,3,1
+64,Riya Sethi ,riya.sethi@e-arc.com,Laptop,E4-60-17-DD-21-19                     E4-60-17-DD-21-19                      E4-60-17-DD-21-15,INDLAPTOP203,Windows,2G0NSV3,DELL ,3,3,1
+65,Astha Kumari ,t.astha.kumari@e-arc.com,Laptop,98-E7-43-65-B1-AF             D0-C6-37-75-50-1C,"INDLAPTOP623
+",Windows,GT6QVT2,DELL,3,3,1
+66,Ramprasad Khan,ramprasad.khan@e-arc.com,Laptop,E4-60-17-DC-D2-E6                  AC-91-A1-67-1F-E6                  E4-60-17-DC-D2-EA ,INDLAPTOP213,Windows,7VH0QV3,DELL,3,3,1
+67,Tilak Bhattacharya,Tilak.Bhattacharya@e-arc.com,Laptop,D0-C6-37-D7-1F-2C             C8-F7-50-07-DF-8E,INDLAPTOP534,Windows,Windows,DELL,3,3,1
+68,Rahul Majumder / Bratati Chakraborty,rahul.majumder@e-arc.com,Desktop,C4-65-16-18-3B-BD ,INDTAPPL088,Windows,INA914QFR3,HP,1,3,1
+69,Srinivas Rao Mukkamala,srinivas.mukkamala@e-arc.com,Laptop,"00-50-56-C0-00-08 
+1C-C1-0C-D7-FD-8E   
+B4-45-06-13-7B-67   
+1C-C1-0C-D7-FD-92",INDLAPTOP888,Windows,4DPSRG3,DELL,3,3,1
+70,Rahul Roy,rahul.roy@e-arc.com,Desktop,"60-02-92-1D-06-C4
+38-B1-DB-79-C6-EE 
+38-B1-DB-79-C6-ED ",ARC-RAHULSIR,Windows,NA,HP,1,3,1
+71,Monish Singh Thakur MAC-mini,monish.thakur@e-arc.com,MAC-Mini,,INDKOLMACOO1,MAC,C07XN1ZNJYVW,APPLE,2,2,1
+72,Vishal Khosla,Vishal.Khosla@e-arc.com,MAC-Mini,"A4:77:F3:08:2A:5A
+A4-77-73-08-2A-5A",INKOMAC008,MAC,C07JY0EPQ6P0,APPLE,2,2,1
+73,QA Team,QA.Team@e-arc.com,MAC-Mini,"A4:77:F3:06:E7:F3
+",INKOMAC007,MAC,C07JY0ELQ6P0,Apple,2,2,1
+74,Bishal Baivab Sahoo,bishal.sahoo@e-arc.com,Laptop,7C-70-DB-BF-43-39                   00-E0-4C-68-5B-0F,INDLAPTOP714,Windows,5CG14168LT,HP,1,3,1
+75,Pratyush Chakrobarti,pratyush.chakraborty@e-arc.com,Laptop,I0-08-B1-3A-A8-9D      34-64-A9-BD-5E-34            I0-08-B1-3A-A8-9E,INDLAPTOP950,Windows,CND4405WQV,HP,1,3,1
+76,Soumadip Pal,soumadip.pal@e-arc.com,Laptop,AC-91-A1-6B-C5-BE           28-C5-D2-95-2A-4A                   28-C5-D2-95-2A-4E,INDLAPTOP241,Windows,FG1MY04,DELL,3,3,1
+77,Biswajit Bera,biswajit.bera@e-arc.com,Laptop,"7C-4D-8F-04-42-83
+00-A5-54-B1-72-EF",INDLAPTOP666,Windows,5CD2527NMR,HP,1,3,1
+78,Rajdeep Sarkar,rajdeep.sarkar@e-arc.com,Laptop,AC-91-A1-67-23-DD                                    E4-60-17-DE-C1-69                                      E4-60-17-DE-C1-6D,INDLAPTOP204,Windows,6BHLSV3,DELL,3,3,1
+79,Saikat Kar ,t.saikat.kar@e-arc.com,Laptop,ac:91:a1:6b:cc:bd              28:c5:d2:95:64:15,INDLAPTOP230,Linux,CKRJY04,DELL,3,1,1
+80,Anwesha Ganguly,anwesha.ganguly@e-arc.com,Laptop,48-45-20-C8-FF-F0           A0-8C-FD-A1-3B-3C ,INDLAPTOP763,Windows,5CG6244220,HP,1,3,1
+81,Pradipta Chatterjee,pradipta.chatterjee@e-arc.com,Laptop,28-C5-D2-99-E6-66            AC-91-A1-6B-C6-7C           28-C5-D2-99-E6-6A,INDLAPTOP242,Windows,HD1MY04,DELL,3,3,1
+82,Chayan Chatterjee,chayan.chatterjee@e-arc.com,MAC-Mini,A4-CF-99-79-3C-8F,chayanc-MACbook,MAC,C6F14RFQHW,APPLE,2,2,1
+83,Anibrata gupta,anibrata.gupta@e-arc.com,Laptop,1C-C1-0C-DC-76-75,INDLAPTOP807,Windows,DFKBQG3,DELL,3,3,1
+84,Subhrajit Saha,subhrajit.saha@e-arc.com,Laptop,7C-B0-C2-72-E5-02 / 40-B0-34-E2-EE-23 / 7C-B0-C2-72-E5-06,INDLAPTOP890,Windows,5CG7077G5G,HP,1,3,1
+85,Vishal Khosla,vishal.khosla@e-arc.com,MACBook,38-F9-D3-32-6E-24,INKOMAC042,MAC,C02XM8A5JK7C,APPLE,2,2,1
+86,Saurabh Kumar,Saurabh.Kumar@e-arc.com,Laptop,"C8-F7-50-7C-28-89
+A0-51-0B-2B-10-BF 
+A0-51-0B-2B-10-C3",INDLAPTOP567,Windows,5L21NF2,DELL,3,3,1
+87,Suresh K.Mishra,c.Suresh.Mishra@e-arc.com,Laptop,F4-EE-08-E1-47-12               1C-C1-0C-DC-78-37             1C-C1-0C-DC-78-3B,INDLAPTOP946,Windows,BFKBQG3,DELL ,3,3,1
+88,Debabrata Khan,Debabrata.Khan@e-arc.com,Laptop,B4-69-21-D2-AE-7E                  E4-E7-49-21-9A-47                    B4-69-21-D2-AE-82,INDLAPTOP963,Windows,5CG8481XMY,HP,1,3,1
+89,"Anirban Samaddar 
+","Anirban.Samaddar@e-arc.com
+",Laptop,28-C5-D2-95-71-F3/ AC-91--A1-6B-C5-DE,INDLAPTOP232,Linux,426.00000004,DELL,3,1,1
+90,Pranav Kumar,Pranav.Kumar@e-arc.com,MACBook,3C-22-FB-A3-F9-13,inkoMAC031,MAC,C02CQ69GMD6P,APPLE,2,2,1
+91,Asish Kumar Barman,Asish.Kumar.Barman@e-arc.com,MAC-Mini,A4-77-F3-00-F6-B3                 A4-77-F3-04-F8-C0,INKOMAC035,MAC,C07K1157Q6PQ,APPLE,2,2,1
+92,Sani Acharjee,Sani.Acharjee@e-arc.com,Laptop,F4-B3-01-8E-B0-3E,INDLAPTOP889,Windows,5CD2527N92,HP,1,3,1
+93,Digvijay,c.digvijayjaywant.lawand@e-arc.com,Laptop,7C-70-DB-BE-5A-F5            F8-E4-3B-0C-CA-B4 ,INDLAPTOP701,Windows,5CG14168LV,HP,1,3,1
+94,Subhasis Saha Team,security.team@e-arc.com,MAC-Mini,A8-60-B6-3B-55-EB                   DC-A4-CA-F1-BA-B3                ,monitoring-MACmini,MAC,C071Q9TAG1HW,Apple,2,2,1
+95,Abhishek Sharma ,c.Abhishek.Sharma@e-arc.com,Laptop,F4-D1-08-12-8F-0E                 B0-0C-D1-C2-AF-06,INDLAPTOP974,Windows,5CG90555XL,HP,1,3,1
+96,QA Common,divyanshu@e-arc.com,Desktop,A0-48-1C-95-BF-52,IND-DESK-QA-SR5,Linux,INA410V041,HP,1,1,1
+97,Asif Raza,t.asif.raza@e-arc.com,Laptop,48-45-20-C2-94-76           A0-8C-FD-A1-79-D4            ,INDLAPTOP161,Windows,5CG62446RD,HP,1,3,1
+98,Joyvishek Ghosh ,c.Joyvishek.Ghosh@e-arc.com,Laptop,ac-91-a1-67-23-d4 ; e4-60-17-de-co-ce,INDLAPTOP205,Windows,88HLSV3,HP,1,3,1
+99,Deep Kumar Singh,t.deep.singh@e-arc.com,Laptop ,ac:91:a1:67:23:d7; ac:91:a1:67:23:d7,INDLAPTOP202,Linux,7H0NSV3,DELL ,3,1,1
+100,Anit Bhunia ,t.anit.bhunia@e-arc.com,Laptop,ac:91:a1:6b:c6:71,INDLAPTOP234,Linux,3J1MY04,DELL ,3,1,1
+101,Small conference room,,Desktop,6C-3B-E5-22-9C-B1,INDESKTOP-CONFE,Windows,INA316PCZL,HP,1,3,1
+102,Mrinmoy Majumder,Mrinmoy.Sarkar@e-arc.com,Laptop,10-18-98-e9-b3-e7,INDLAPTOP441,Windows,5CG90554V3,APPLE ,2,3,1
+103,Rupanjana Das & Her Team,,Desktop,74-56-3C-2E-7B-56,IND-SECURITY1,Windows,N/A,GIGBYTE,,3,1
+104,Rupanjana Das,rupanjana.das@e-arc.com,Desktop,74-56-3C-2E-7A-9D,INDSECURITY2,Linux,N/A,GIGBYTE,,1,1
+105,Jagadish Chandra Sarkar,Jagadish.Sarkar@e-arc.com,MAC-Mini,5C-1B-F4-95-4A-FB       5C-1B-F4-8B-D0-9B,INKOMAC30,MAC,YQ7NXX1J44,APPLE,2,2,1
+106,Sunny kumar,sunny.kumar@e-arc.com,MACBook,a4-cf-99-f9-ff-f2,INKOMAC018,MAC,Y4TXJQC0F2,APPLE,2,2,1
+107,Triparna Saha ,Triparna.Saha@e-arc.com,Laptop,B0-0C-D1-C8-BC-3E  F4-D1-08-11-DD-E3  F4-D1-08-11-DD-E7,INDLAPTOP646,Windows,5CG905557N,HP,1,3,1
+108,Subham Ghosh / Srijonprasad Banerjee,subham.ghosh@e-arc.com,Desktop,70-5A-0F-3F-E9-B2,INDHYPERLNK15,Windows,INA750QST2,HP,1,3,1
+109,sayani saha,sayani.saha@e-arc.com,Laptop,C0-3E-BA-53-31-1B/08-D2-3E-45-26-7B/08-D2-3E-45-26-7F,INDLAPTOP637,Windows,54C2N13,DELL,3,3,1
+110,Aritra Polsai,Aritra.Polsai@e-arc.com,Laptop,C8-F7-50-41-3B-0A            D0-C6-37-74-DA-29,INDLAPTOP615,Windows,567.0QVT2,DELL,3,3,1
+111, CCTV System in HR room,.CCTV.System.in.HR.room@e-arc.com,MAC-Mini,f0:18:98:bc:9c:36  f0:18:98:e9:b3:e7,cctv-MAC-mini,MAC,C07XN1E1JYVW,APPLE,2,2,1
+112,Rahul Roy Room,Rahul.Roy.Room@e-arc.com,Desktop,74:56:3C:7F:F8:94,INDDESKTOP-CONF,Windows,System Assemble,Assemble,,3,1
+113,Soumen Adhikari,Soumen.Adhikari@e-arc.com,Laptop,AC-91-A1-67-23-27    E4-60-17-DD-0A-4F   E4-60-17-DD-0A-53 ,INDLAPTOP210,Windows,6WMCVT3,DELL,3,3,1
+114,Abhineet Kumar,Abhineet.Kumar@e-arc.com,Laptop,7C-4D-8F-04-44-8B                                      00-A5-54-B1-A1-16,INDLAPTOP654,Windows,5CD2527N6C,HP,1,3,1
+115,Indronil Barua ,Indronil.Barua.@e-arc.com,Laptop,DC-21-48-F9-94-EE,INDLAPTOP767,Windows,5CG1435DFB,HP,1,3,1
+116,Subrata Mondal,Subrata.Mondal@e-arc.com,Laptop,28-C5-D2-99-E6-7F            AC-91-A1-6B-C5-C9            28-CD-D2-99-E6-83,INDLAPTOP237,Windows,9G1MY04,DELL,3,3,1
+117,Reception,Reception@e-arc.com,Desktop,AC-16-2D-0F-A3-B7,INDTAPPLHR01,Windows,INA229Y3HN,HP,1,3,1
+118,Sharmista Halder,Sharmista.Halder@e-arc.com,Laptop,"D4-3B-04-5A-C6-98
+C8-F7-50-41-3A-59",INDLAPTOP737,Windows,FN6QVT2,DELL,3,3,1
+119,Srayasree Biswas,Srayasree.Biswas@e-arc.com,Laptop,A8-6D-AA-51-61-CF/A8-6D-AA-51-61-D3/9C-7B-EF-9C-3C-C0,INDLAPTOP538,Windows,5CG9190P94,HP,1,3,1
+120,Swarup Khanra,swarup.khanra@e-arc.com,Laptop,"6C:96:CF:F2:81:78
+78:7B:8A:C1:40:AE",INKOMAC030,MAC,,APPLE,2,2,1
+121,Subhajit saha Remote user,subhajit.saha@e-arc.com,Laptop,AC-91-A1-6B-C6-70                                    28-C5-D2-99-CF-B4                                   28-C5-D2-99-CF-B8,INKOLWSUBHAJIT,Windows,D16MY04,DELL,3,3,1
+122,Sandeep Sarkar,Sandeep.Sarkar@e-arc.com,Laptop,C8-F7-50-41-3E-9F/ D0-C6-37-D5-82-34,INDLAPTOP770,Windows,G38QVT2,DELL,3,3,1
+123,Big Conference Room,Big.Conference.Room@e-arc.com,Desktop,74-56-3C-59-BD-A6,INDESKTOP-CONF,Windows,Assemble,Assemble,,3,1
+124,SUBHARAJ KUMAR Room,SUBHARAJ.KUMAR.Room@e-arc.com,Desktop,6C-62-6D-0B-B7-D5 ,INDDESKTOPconf1,Windows,INA102S4J1,HP,1,3,1
+125,Sayani Saha,Sayani.Saha@e-arc.com,MAC-Mini,1B-4A-53-23-F3-33 /  1B-4A-53-26-59-69,INKOMAC33,MAC,TXG59W2XLF,APPLE,2,2,1
+126,Debraj Kundu,Debraj.Kundu@e-arc.com,Laptop,28-00-AF-C1-73-E7/10-91-D1-24-7A-20,INDLAPTOP673,Linux,4FCNSL3,HP,1,1,1
+127,Amit Mandal,Amit.Mandal@e-arc.com,Laptop,B0-0C-D1-C8-AC-D6/ F4-D1-08-11-DA-D2/ F4-D1-08-1-DA-D6,INDLAPTOP561,Windows,5CG90555PQ,HP,1,3,1
+128,S Reddy Prakash,S.Reddy.Prakash@e-arc.com,Laptop,A4-C3-F0-9E-0B-6F            8O-E8-2C-BE-E9-ED             A4-C3-F0-9E-0B-73,INDLAPTOP937,Windows,5CG9263S1W,HP,1,3,1
+129,sangeeta singha,sangeeta.singha@e-arc.com,Laptop,"C8-F7-50-33-C0-71
+48-F1-7F-8C-3A-5C
+48-F1-7F-8C-3A-60",INDLAPTOP727,Windows,5L21NF2,DELL,3,3,1
+130,Medichrla Venkata Sri Ram,Medichrla.Venkata.Sri.Ram@e-arc.com,Laptop,B8-8A-60-90-CB-80/10-65-30-1D-D3-4F,INDLAPTOP757,Windows,DZ3H1N2,DELL,3,3,1
+131,US Account(Anjali Kundu),US.Account(Anjali.Kundu)@e-arc.com,Laptop,A4-C3-F0-9E-B0-4B /80-E8-2C-BE-6A-95/A4-C3-F0-9E-B0-47,INDLAPTOP855,Windows,5CG9263S4F,HP,1,3,1
+132,vishal khosla,vishal.khosla@e-arc.com,MAC-Mini,F0-18-98-B1-04-3A/F0-18-98-EC-56-08,INKOMAC010,MAC,C07XN28VJYUW,APPLE,2,2,1
+133,Sayani Saha,Sayani.Saha@e-arc.com,Laptop,"38-BA-F8-68-5C-4A   
+F4-39-09-E0-E5-A7    
+38-BA-F8-68-5C-4E",INDLAPTOP668,Windows,5CG8385SWP,HP,1,3,1
+134,Sonalika Das ,Sonalika.Das.@e-arc.com,Laptop,B4-B6-86-D7-0D-7A ;0C-54-15-E6-62-66;0C-54-15-E6-62-6A,INDLAPTOP621,Windows,5CD8213ZX2,HP,1,3,1
+135,Sunny tamang,Sunny.tamang@e-arc.com,Laptop,A0-8C-FD-AA-11-74 /48-45-20-DB-38-EB/48-45-20-DB-38-EF ,INDLAPTOP779,Windows,5CG624400D,HP,1,3,1
+136,Raj Kumar Acharya,Raj.Kumar.Acharya@e-arc.com,Laptop,F4-D1-08-12-B9-E3 /B0-0C-D1-C8-BC-4F ,INDLAPTOP813,Windows,5CG90555RB,HP,1,3,1
+137,amir khan,amir.khan@e-arc.com,Laptop,94-B8-6D-6E-E7-95 /10-62-E5-53-A4-4F/94-B8-6D-6E-E7-99 ,INKOLW949AMIR,Windows,5CG82165MW,HP,1,3,1
+138,Rayel pal,Rayel.pal@e-arc.com,Laptop,1C-C1-0C-DC-77-10/F4-EE-08-E1-54-BE,INDLAPTOP802,Windows,3HKBQG3,DELL,3,3,1
+139,ADITYA CHAURASIA,ADITYA.CHAURASIA@e-arc.com,MAC-Mini,00-8A-76-E6-15-91 / 00-8A-76-F1-15-16,INKOMAC21,MAC,C07JK182Q6P0,APPLE,2,2,1
+140,MANAS PRATIM SARKAR,MANAS.PRATIM.SARKAR@e-arc.com,Laptop,B0-0C-D1-C8-BC-47/F4-D1-08-11-E4-5F,INDLAPTOP527,Linux,SCG9055556,HP,1,1,1
+141,Md saquib,Md.saquib@e-arc.com,MAC-Mini,a4-77-f3-06-99-ad             a4-77-f3-06-80-f0,INKOMAC24,MAC,C07JY0EJQ6P0,APPLE,2,2,1
+142,Debjyoti Putatunda,Debjyoti.Putatunda@e-arc.com,Laptop,50-81-40-AF-D0-E4/B0-7D-64-43-A1,INDLAPTOP734,Windows,5CG1017PCQ,HP,1,3,1
+143,Subhankar Roy,Subhankar.Roy@e-arc.com,Laptop,D4-54-8B-80-B7-B3,INDLAPTOP134,Windows,55T0BK3,DELL,3,3,1
+144,Revolina Sarkar,Revolina.Sarkar@e-arc.com,Laptop,DC-8B-28-1B-FC-F6/E4-E7-49-21-86-29 ,INDLAPTOP873,Windows,5CG8483982,HP,1,3,1
+145,Sulip Dhabal / Bipasha Dutta,Sulip.Dhabal./.Bipasha.Dutta@e-arc.com,Laptop,20-68-9D-8F-B1-B0/B4-B5-2F-7A-4C-45/20-68-9D-8F-54-B8 ,INDLAPTOP642,Windows,2CE24110LV,HP,1,3,1
+146,ACCOUNT,ACCOUNT@e-arc.com,Desktop,2C-41-38-8B-D7-73,INDTACC006,Windows,INA145X568,HP,1,3,1
+147,shubhamoy sarkar ,shubhamoy.sarkar.@e-arc.com,Laptop,98-E7-43-8E-76-73 /4C-1D-96-0A-20-F8/4C-1D-96-0A-20-FC ,INDLAPTOP859,Linux,6G6ZYY2,HP,1,1,1
+148,Triparna Saha,Triparna.Saha@e-arc.com,Laptop,A4-4C-C8-32-B7-2B/28-16-AD-FB-1F-F3/28-16-AD-FB-1F-F7,INDLAPTOP776,Windows,CVK2GH2,DELL,3,3,1
+149,Ayush Kumar,Ayush.Kumar@e-arc.com,Laptop,7C-70-DB-BD-62-08,INDLAPTOP812,Linux,5CG14168LN,HP,1,1,1
+150,Arpita Chakraborty,Arpita.Chakraborty@e-arc.com,Laptop,A4-4C-C8-50-79-50,INDLAPTOP577,Windows,F05GNH2,DELL,3,3,1
+151,Ritam Poddar,Ritam.Poddar@e-arc.com,Laptop,77-70-DB-0C-55-58              7C-70-DB-0C-55-5C  00-15-5D-49-67-50,INDLAPTOP894,Windows,5CG1437GQM,HP,1,3,1
+152,Titas Pushilal,Titas.Pushilal@e-arc.com,Laptop,A8-6D-AA-4F-F9-2E            A8-6D-AA-4F-F9-2A                    9C-7B-EF-9C-89-49,INDLAPTOP557,Windows,5CG9190PP2,HP,1,3,1
+153,sujoy chakorborty,sujoy.chakorborty@e-arc.com,Laptop,34-64-A9-7B-AF-47 /10-08-B1-25-15-55 /10-08-B1-25-15-56 ,INDLAPTOP887,Windows,CND4377060,HP,1,3,1
+154,pranav kumar,pranav.kumar@e-arc.com,Laptop,40-B0-34-E2-1F-00/7C-B0-C2-72-EC-F0,INDLAPTOP976,Windows,5CG7077FZ7,HP,1,3,1
+155,Account audit,Account.audit@e-arc.com,Laptop,38-BA-F8-68-5A-60/F4-39-09-E0-26-92/ 38-BA-F8-68-5A-64,INDLAPTOP822,Windows,5CG8385RMG,HP,1,3,1
+156,QA VISHAL KHOSLA,QA.VISHAL.KHOSLA@e-arc.com,Laptop,  44-1C-A8-FD-4D-1B          A0-BC-FD-2C-1B-AF     44-1C-A8-FD-4D-1C,INDLAPTOP555,Windows,5CD6207BMM,HP,1,3,1
+157,Sohag roy choudhury,Sohag.roy.choudhury@e-arc.com,,3C-52-82-50-CF-28,INDHYPERLNK9,Windows,INA810TV0Z,HP,1,3,1
+158,Deepdisha Chakraborty,Deepdisha.Chakraborty@e-arc.com,Laptop,F4-B3-01-8E-B0-3E    F8-E4-3B-0C-CA-B4,INDLAPTOP729,Windows,CND1273XY1,HP,1,3,1
+159,Anirban Chkraborty,Anirban.Chkraborty@e-arc.com,Laptop,10-62-E5-98-FB-D5/B4-6B-FC-EB-9B-19 /B4-6B-FC-EB-9B-1D,INDLAPTOP759,Windows,5CG8243SHY,HP,1,3,1
+160, Surodoy Maiti,.Surodoy.Maiti@e-arc.com,Laptop,08-6A-C5-22-D5-A3            08-6A-C5-22-D5-A7 ,INDLAPTOP632,Windows,5CG133535X,HP,1,3,1
+161,Saikat Chattaraj ,Saikat.Chattaraj.@e-arc.com,Laptop,50:81:40:af:d0:e4          b0:7d:64:4d:43:a1,INDLAPTOP877,Linux,5CG1017PCQ,HP,1,1,1
+162,Sourav Paul,Sourav.Paul@e-arc.com,Laptop,F4-A4-75-43-6A-B6          F4-A4-75-43-6A-BA ,INDLAPTOP777,Windows,R914V68J,LENOVO,4,3,1
+163,Amirul Islam,Amirul.Islam@e-arc.com,Laptop,DC-21-48-F6-2D-C2                 DC-21-48-F6-2D-C6,INDLAPAMIRULI,Windows,5CG1435DT9,HP,1,3,1
+164,Subharaj Kumar,Subharaj.Kumar@e-arc.com,Laptop,28-C5-D2-92-B0-D0/ AC-91-A1-6B-C5-D2,INDLAPTOP235,Windows,3H1MY04,DELL,3,3,1
+165,Sourav Kumar Chakraborty,Sourav.Kumar.Chakraborty@e-arc.com,Laptop,,INDLAPTOP469,Windows,5CD2231KP4,HP,1,3,1
+166,Anasuya Chowdhury,Anasuya.Chowdhury@e-arc.com,Laptop,A8-A7-95-AA-A6-A9/DC-4A-3E-EA-3B-96/A8-A7-95-AA-A6-AA,INDLAPTOP829,Windows,5CD5515Z4M,HP,1,3,1
+167,Tanmoy Goswami,Tanmoy.Goswami@e-arc.com,Laptop,08-D2-3E-48-63-8B /C0-3E-BA-53-2E-22/08-D2-3E-48-63-8F ,INDLAPTOP780,Windows,DXX8N13,DELL,3,3,1
+168,Snahasis Sen,Snahasis.Sen@e-arc.com,Laptop,1C-C1-0C-DC-76-BB  F4-EE-08-E1-51-E8   1C-C1-0C-DC-76-BF,INDLAPTOP806,Windows,HGKBQG3,DELL,3,3,1
+169,Sankhasubhra De,Sankhasubhra.De@e-arc.com,Laptop,4C-1D-96-08-5A-AC / 98-E7-43-89-D7-33,INDLAPTOP597,Linux,5QQZYY2,DELL,3,1,1
+170,Atik Pal,Atik.Pal@e-arc.com,Laptop,7C:70:db:bd:70:5e,INDLAPTOP720,Linux,5CG14168LQ,HP,1,1,1
+171,SOUMADIP PATI,SOUMADIP.PATI@e-arc.com,Laptop,7c:b0:c2:72:ec:eb   40:b0:34:e2:de:d2,INDLAPTOP353,Linux,5CG7077GND,HP,1,1,1
+172,Pratap Senapati,Pratap.Senapati@e-arc.com,Laptop,5C-5F-67-A5-AA-F/10-62-E5-53-BC-07,INDLAPTOP886,Linux,5CG8220X72,HP,1,1,1
+173,Anirudra Banerjee,Anirudra.Banerjee@e-arc.com,Laptop,Ac:91:A1:67:23:32      E4:60:17:DC:D1:38,INDLAPTOP648,Windows,80J0QV3,HP,1,3,1
+174,Dwaipayan Dhar,Dwaipayan.Dhar@e-arc.com,Laptop,A8-A7-95-AB-A1-68/A8-A7-95-AB-A1-67/DC-4A-3E-EA-3B-8C ,INDLAPTOP315,Windows,CND4494ZL3,HP,1,3,1
+175,Aayush Raj,Aayush.Raj@e-arc.com,Laptop,1C-C1-0C-D7-FC-CB /B4-45-06-13-7A-CD/1C-C1-0C-D7-FC-CF ,INDLAPTOP660,Windows,2FPSRG3,DELL ,3,3,1
+176,Priyanshu Gupta,Priyanshu.Gupta@e-arc.com,Laptop,ac:91:a1:67:23:d8                                                       e4:60:17:dd:0e:1e,INDLAPTOP201,Linux,8ZBPSV3,DELL ,3,1,1
+177,mukesh kumar,mukesh.kumar@e-arc.com,Laptop,C8-F7-50-41-41-39/D4-3B-04-39-4D-7E/D4-3B-04-39-4D-82,INDLAPTOP647,Windows,34SMVT2,DELL ,3,3,1
+178,Dona Thakur,Dona.Thakur@e-arc.com,Laptop,B4-B6-86-D7-0B-9C/0C-54-15-E6-6A-13,INDLAPTOP489,Windows,5CD8213ZT5,HP,1,3,1
+179,MD. Farazul Haque,MD..Farazul.Haque@e-arc.com,Laptop,C8:F7:50:7F:4A:3E /3C:F0:11:35:BC:59,INDLAPTOP515,Linux,3QCQQV2,DELL,3,1,1
+180,Sunny Bhagat ,Sunny.Bhagat.@e-arc.com,MACBook,84:94:37:b8:ab:f9   ,INKOMAC002,MAC,D9DP2N43HW,APPLE,2,2,1
+181,Utpal Giri,Utpal.Giri@e-arc.com,Laptop,58-6D-67-F3-D4-41 / 10-98-19-81-F2-9A,INDLAPTOP775,Windows,4HJPSW3,DELL,3,3,1
+182,Soumya Utthasini,Soumya.Utthasini@e-arc.com,MACBook,"3C:06:30:30:4E:E2
+",INKOMAC037,MAC,FVFG67WUQ05D,APPLE,2,2,1
+183,Sujay Banik,Sujay.Banik@e-arc.com,Laptop,A4:4C:C8:26:41:89,INDLAPTOP893,Windows,3QN2FH2,DELL,3,3,1
+184,Subham De,Subham.De@e-arc.com,Laptop,C8-F7-50-7F-D2-FA/3C-F0-11-34-0E-E6,INDLAPTOP709,Linux,18HNQV2,DELL,3,1,1
+185,Ahel Yadav,Ahel.Yadav@e-arc.com,Laptop,E4-E7-49-21-7A-C3    DC-8B-28-1A-EC-1C ,INDLAPTOP507,Windows,5CG8483B9T,HP,1,3,1
+186,Nitish Paul,Nitish.Paul@e-arc.com,Laptop,00-A5-54-B5-46-F9-/7C-4D-8F-04-43-15/00-A5-54-B5-46-FD,INDLAPTOP973,Windows,5CD2527NK8,HP,1,3,1
+187,Avijit Datta,Avijit.Datta@e-arc.com,Laptop,AC-91-A1-6B-C5-C4            28-C5-D2-99-E6-3E             28-C5-D2-99-E6-42,INDLAPTOP240,Windows,BF1MY04,DELL,3,3,1
+188,Subhankar Roy ,Subhankar.Roy.@e-arc.com,Laptop,A8:A7:95:AA:A6:AD,INDLAPTOP874,Windows,5CD5515Z48,HP,1,3,1
+189,Sahin Dafader,Sahin.Dafader@e-arc.com,Laptop,74-DF-BF-C4-74-9E,INDLAPTOP539,Windows,5CD6235XRX,HP,1,3,1
+190,Hiranmoy Mondal,Hiranmoy.Mondal@e-arc.com,Laptop,DC-21-48-F6-2D-C2                 DC-21-48-F6-2D-C6,INDLAPTOP955,Windows,5CG1435DT9,HP,1,3,1
+191,QA Monitoring,QA.Monitoring@e-arc.com,MAC-Mini,60-f8-1d-c5-d9-d0             ac-87-a3-36-eb-8d,INKOMAC005,MAC,C07JY0FHQ6P0,APPLE,2,2,1
+192,Arup Das,Arup.Das@e-arc.com,Laptop,4C-77-CB-11-25-C4/F4-EE-08-DF-3A-BB/4C-77-CB-11-25-C8,INDLAPTOP957,Linux,8RX8QG3,DELL,3,1,1
+193,MAYANK MITTAL,MAYANK.MITTAL@e-arc.com,Desktop,18-C0-4D-D7-C7-C0,INDTAPPL3D3,Windows,NA,ASSEMBLED,,3,1
+194,Arijit Musib,Arijit.Musib@e-arc.com,Laptop,80-E8-2C-54-11-5E/A8-6D-AA-B4-CB-70/A8-6D-AA-B4-CB-74 ,INDLAPTOP747,Windows,5CG92182GL,HP,1,3,1
+195,Hiranmoy Barman,Hiranmoy.Barman@e-arc.com,Laptop,9C-B7-0D-D4-04-13/E4-11-5B-51-72-7A ,INDLAPTOP839,Windows,CNU2132BC7,HP,1,3,1
+196,Ashis Kumar Sasmol,Ashis.Kumar.Sasmol@e-arc.com,MACBook,"9C:3E:53:86:5F:E7
+",INKOMAC015,MAC,J3GFWQ6RGF,APPLE,2,2,1
+197,Soumalya Banerjee,Soumalya.Banerjee@e-arc.com,MACBook,AC:07:75:05:DB:22,INKOMAC100,MAC,LV3HH7XQ7K,APPLE,2,2,1
+198,Saurav Kumar Sinha,Saurav.Kumar.Sinha@e-arc.com,Laptop,DC:8B:28:1A:EC:1C   E4:E7:49:21:7A:C3,INDLAPTOP507,Windows,5CG8483B9T,HP,1,3,1
+199,Dhiraj Das,Dhiraj.Das@e-arc.com,Laptop,C8-F7-50-41-3A-70/D0-C6-37-75-5E-BD/D0-C6-37-75-5E-C1,INDLAPTOP702,Windows,61JPVT2,DELL,3,3,1
+200,Tusharika Mandal,Tusharika.Mandal@e-arc.com,Laptop,F4-A4-75-4E-59-E3,INDLAPTOP697,Windows,r914v64w,DELL,3,3,1
+201,supratim maji,supratim.maji@e-arc.com,Laptop,80-56-F2-5B-D8-7F/B4-B5-2F-8C-0A-3E,INDLAPTOP794,Windows,INA349PBKH,HP,1,3,1
+202,Raviraj Kumar Sah,Raviraj.Kumar.Sah@e-arc.com,Laptop,40-B0-34-E2-2F-3C  7C-B0-C2-72-E3-18 7C-B0-C2-72-E3-1C,INDLAPTOP751,Linux,5CG7077G38,HP,1,1,1
+203,Dip Saha,Dip.Saha@e-arc.com,Laptop,F4-39-09-E0-26-92/38-BA-F8-68-5A-60 /38-BA-F8-68-5A-64 ,INDLAPTOP834,Windows,5CG8385RMG,HP,1,3,1
+204,Gundala Kushal Bhavani Reddy,Gundala.Kushal.Bhavani.Reddy@e-arc.com,Not Installed,,INDLAPTOP735,Windows,5CG82165MW,HP,1,3,1
+205,Anshu Kumar,Anshu.Kumar@e-arc.com,Not Installed,,INDLAPTOP665,Windows,79KDGH2,DELL,3,3,1
+206,Godhuli Sarkar,Godhuli.Sarkar@e-arc.com,MACBook,EE:B4:DE:10:F1:A1,INKOMAC036,MAC,HKFXKL9TNW,APPLE,2,2,1
+207,Harshal Patil,Harshal.Patil@e-arc.com,Laptop,C8-F7-50-41-3A-6C             D0-C6-37-74-CA-9D            D0-C6-37-74-CA-A1 ,INDLAPTOP568,Windows,B5MPVT2,DELL,3,3,1
+208,Amit Kumar Singh,Amit.Kumar.Singh@e-arc.com,MAC-Mini,00-8A-76-E5-C8-1C        00-8A-76-F0-D7-31,INKOMAC017,MAC,C07JK17UQ6P0,APPLE,2,2,1
+209,ANNESHA DUTTA,ANNESHA.DUTTA@e-arc.com,Laptop,"B4-69-21-D2-71-11  
+E4-E7-49-21-19-00  
+B4-69-21-D2-71-15 ",INDLAPTOP789,Windows,5CG8481Y4X,HP,1,3,1
+210,Mrinmoy Mazumder,Mrinmoy.Mazumder@e-arc.com,Laptop,"B4-45-06-13-7A-BB   
+1C-C1-0C-D7-FD-D4   
+1C-C1-0C-D7-FD-D8   
+00-15-5D-85-6D-07
+",INDLAPTOP695,Windows,3DPSRG3,DELL,3,3,1
+211,Biswadip Chakraborty,Biswadip.Chakraborty@e-arc.com,Laptop,F4-EE-08-DF-3A-41/4C-77-CB-11-25-10,INDLAPTOP174,Windows,8QX8QG3,DELL,3,3,1
+212,Artab Maji,Artab.Maji@e-arc.com,Laptop,8C:04:BA:07:47:58 / DC:FB:48:CC:55:97,INDLAPTOP756,Windows,0.001X2,DELL,3,3,1
+213,Aritri Saha,Aritri.Saha@e-arc.com,Laptop,A4-B1-C1-42-5B-71,INDLAPTOP178,Windows,8V3G373,DELL,3,3,1
+214,Rishiraj Ganguly ,Rishiraj.Ganguly.@e-arc.com,Laptop,B4-B5-2F-84-5B-D3,INKOLWRISHIR,Windows,INA325S1KD,HP,1,3,1
+215,Sulagna Swarnakar,Sulagna.Swarnakar@e-arc.com,Laptop,c8:f7:50:7f:d3:ad/ a0:51:0b:1b:4a:0e,INDLAPTOP562,Windows,3DMMQV2,DELL,3,3,1
+216,Manthan Nandi,Manthan.Nandi@e-arc.com,Laptop,DC-8B-28-1B-FC-8D,INDLAPTOP736,Windows,5CG84838GP,HP,1,3,1
+217,Anand Kumar,Anand.Kumar@e-arc.com,MAC-Mini,D0:11:E5:CE:22:ED,INKOMAC022,MAC,CXQTH19N4K,APPLE,2,2,1
+218,Rahmat Ali,Rahmat.Ali@e-arc.com,Laptop,B4-69-21-2C-FD-CB            E4-B9-7A-39-BE-43,INDLAPTOP537,Windows,79JFMQ2,DELL,3,3,1
+219,Ritam Debnath,Ritam.Debnath@e-arc.com,Laptop,A8-A7-95-AA-A6-94/DC-4A-3E-EA-36-FB/A8-A7-95-AA-A6-93,INDLAPTOP821,Windows,5CD5515Z4D,HP,1,3,1
+220,AyushRaj Gupta,AyushRaj.Gupta@e-arc.com,Laptop,"FC-3F-DB-38-42-77  
+A8-A7-95-42-D8-05   
+A8-A7-95-42-D8-06",INDLAPTOP187,Windows,CND5513V24,HP,1,3,1
+221,Dipankar Bhowmik,Dipankar.Bhowmik@e-arc.com,Laptop,"10-08-B1-3B-00-AA
+10-08-B1-3B-00-A9
+34-64-A9-BD-61-84",INDLAPTOP679,Windows,CND4405WRP,HP,1,3,1
+222,Dev Basu,Dev.Basu@e-arc.com,Desktop,2C-41-38-8B-CB-BE,INDDESKTOP765,Windows,INA145X570,HP,1,3,1
+223,Chinmaya Pradhan,Chinmaya.Pradhan@e-arc.com,MAC-Mini,a4-77-f3-04-d4-70            a4-77-f3-06-20-49,INKOMAC016,MAC,C07JY0ESQ6P0,APPLE,2,2,1
+224,Mr. Chaitanya Tompe,Mr..Chaitanya.Tompe@e-arc.com,Laptop,48-F1-7F-8C-3A-39 /C8-F7-50-35-8E-FA/48-F1-7F-8C-3A-3D,INDLAPTOP282,Linux,36Q0NF2,DELL,3,1,1
+225,Banti mondal,Banti.mondal@e-arc.com,Laptop,"98-E7-F4-EF-1D-96
+D0-57-7B-4C-A8-97",INDLAPTOP892,Windows,5CD8358CN2,HP,1,3,1
+226,Kartik Prabhu Jayaram,Kartik.Prabhu.Jayaram@e-arc.com,Laptop,AC-91-A1-67-1F-E5                                     E4-60-17-DC-D1-D3                                       E4-60-17-DC-D1-D7,INDLAPTOP206,Windows,8SH0QV3,DELL,3,3,1
+227,A R SURIYAKALA RAJAN,A.R.SURIYAKALA.RAJAN@e-arc.com,Laptop,,INDLAPTOP974,Windows,2QCNSL3,HP,1,3,1
+228,SOURADEEP SENGUPTA,SOURADEEP.SENGUPTA@e-arc.com,Laptop,"04-D3-B0-B9-E8-0D  
+F4-39-09-E2-66-09",INDLAPTOP616,Windows,5CG8385N9L,HP,1,3,1
+229,MOUSUMI CHOWDHURY,MOUSUMI.CHOWDHURY@e-arc.com,Laptop,DC-FB-48-CE-76-83/8C-04-BA-07-47-EC/DC-FB-48-CE-76-87,INDLAPTOP282,Windows,GC1K1X2,DELL,3,3,1
+230,Amirul Islam,Amirul.Islam@e-arc.com,MAC-Mini,D0:11:E5:EE:AE:C9,INKOMAC08,MAC,GWTKW5VX33,APPLE,2,2,1
+231,Triparna Saha,Triparna.Saha@e-arc.com,Laptop,80-45-DD-B7-43-0A,INDLAPTOP851,Windows,GCMW3F3,DELL,3,3,1
+232,Maniur Rahman,Maniur.Rahman@e-arc.com,Desktop,2C-44-FD-18-A0-86,INDDESKTOP915 ,Windows,INA348ZY19 /G9M43Z2,HP,1,3,1
+233,Toufik Gharami,Toufik.Gharami@e-arc.com,Desktop,E8-39-35-39-8A-73,INDDESKTOP916,Windows,INA211Q7KD,HP,1,3,1
+234,Srijika Mitra,Srijika.Mitra@e-arc.com,Laptop,7C-4D-8F-04-43-64              00-A5-54-B3-AE-70                00-A5-54-B3-AE-74,INDLAPTOP107,Windows,5CD2527NCX,HP,1,3,1
+235,Arpan Mitra,Arpan.Mitra@e-arc.com,Laptop,B4-6B-FC-1B-AA-12,INDLAPTOP914,Windows,5CD826OQYK,HP,1,3,1
+236,Mainak Karmakar,t.mainak.karmakar@e-arc.com,Laptop,58-A0-23-E8-F6-B1,INDLAPTOP923,Windows,5CD925BCR6,HP,1,3,1
+237,Arya Sundar Das / vatsal Gupta,t.arya.das@e-arc.com,Laptop,D0-C6-37-43-FA-62,INDLAPTOP921,Windows,5CD812150T,HP,1,3,1
+238,Anshuman Ojha,t.anshuman.ojha@e-arc.com,Laptop,84-A9-3E-0F-27-30,INDLAPTOP920,Windows,5CD84237P7,HP,1,3,1
+239,Nancy Shaw / Santu poddar,t.nancy.shaw@e-arc.com,Laptop,74-E5-F9-94-F8-2C,INDLAPTOP924,Windows,5CD81214ZX,HP,1,3,1
+240,Suman Banerjee,suman.banerjee@e-arc.com,Laptop,90-65-84-15-3E-25,INDLAPTOP913,Windows,HGBD1F3,DELL,3,3,1
+241,Sumit Banerjee,Sumit.Banerjee@e-arc.com,Laptop,60:A5:E2:9F:D2:15,INDLAPTOP925,Windows,4YZGRM3,DELL,3,3,1
+242,Niranjan Kumar,Niranjan.Kumar@e-arc.com,MAC-Mini,14-98-77-69-ef-01,INKOMAC011,MAC,C07H33GPQ6NV,APPLE,2,2,1
+243,Kowshik Biswas,Kowshik.Biswas@e-arc.com,MACBook,AU-CF-99-94-2F-53,INKOMAC32,MAC,XC160029RC,APPLE,2,2,1
+244,Varun Singh,Varun.Singh@e-arc.com,Laptop,7c:70:db:bf:1c:8d,INKOLLVARUNS,Linux,5CG14168LY,HP,1,1,1
+245,Rahul Banerjee,Rahul.Banerjee@e-arc.com,Laptop,F4-D1-08-14-6C-C5/ B0-0C-D1-C8-AC-73 ,INDLAPTOP711,Windows,5CG90554K3,HP,1,3,1
+246,Buddhadeb Bera,Buddhadeb.Bera@e-arc.com,Laptop,DC:56:7B:BA:CF:51,INDLAPTOP927,Linux,9Y4BVB4,DELL,3,1,1
+247,Gunjana Das,Gunjana.Das@e-arc.com,Laptop,7C-B0-C2-72-ED-4A,INDLAPTOP681,Windows,5CG7077GNS,HP,1,3,1
+248,Arpita Banerjee,Arpita.Banerjee@e-arc.com,Laptop,AC-67-5D-A9-51-7D,INKOLWARPITAB,Windows,G9M43Z2,DELL,3,3,1
+249,Pritam Majumder / Pritam Roy,Pritam.Majumder./.Pritam.Roy@e-arc.com,Desktop,D4-C9-EF-EF-7C-8B,INDDESKTOP917,Windows,INA348ZY1B,HP,1,3,1
+250,Raima Banerjee,Raima.Banerjee@e-arc.com,Laptop,"A8-A7-95-AA-A6-AD
+EC-8E-B5-57-DA-2F ",INKOLWRAIMAB,Windows,5CG62442LB,HP,1,3,1
+251,Ayush Jalan,Ayush.Jalan@e-arc.com,Laptop,DC-21-48-F5-D0-43,INKOLLAYUSHJ,Linux,5CG1437H1K,HP,1,1,1
+252,Sulagna Chowdhury,Sulagna.Chowdhury@e-arc.com,Laptop,74-E5-F9-94-F8-4F,INDLAPTOP101,Windows,5CD8121512,HP,1,3,1
+253,Tushar Thakur / Parthib Majumdar / Tonmoy Bose,Tushar.Thakur./.Parthib.Majumdar./.Tonmoy.Bose@e-arc.com,Laptop,E8-6A-64-02-01-0B,INDLAPTOP102,Windows,PF15A140,LENOVO,4,3,1
+254,Anik Karmakar,Anik.Karmakar@e-arc.com,MAC-Mini,D0-11-E5-E7-D9-2C,INKOMAC027,MAC,G6QL6M7PYY,APPLE,2,2,1
+255,Jagadish Sarkar,Jagadish.Sarkar@e-arc.com,Laptop,AC-91-A1-67-23-CE                E4-60-17-DC-BE-4B,INDLAPTOP211,Windows,DXH0QV3,DELL,3,3,1
+256,Akash Singha,Akash.Singha@e-arc.com,Laptop,"6C-02-E0-B9-D0-EB 
+B0-7D-64-4C-E9-6F     ",INDLAPTOP836,Windows,5CG1017QBR,HP,1,3,1
+257,Santanu Biswas,Santanu.Biswas@e-arc.com,Laptop,44-E5-17-26-93-0A,INDLAPTOP114,Windows,5FPK0J3,DELL,3,3,1
+258,Prasun Roy,Prasun.Roy@e-arc.com,Laptop,F8-E4-E3-74-60-49,INDLAPTOP105,Windows,5R95N13,DELL,3,3,1
+259,Saditya Datta / Bittu Ghosh,Saditya.Datta./.Bittu.Ghosh@e-arc.com,Laptop,2C-6D-C1-5A-BD-10,INDLAPTOP111,Windows,J5DM9K3,DELL,3,3,1
+260,GUNTURU UDITH KALYAN ,GUNTURU.UDITH.KALYAN.@e-arc.com,Laptop,7C-B0-C2-72-E9-EE/40-B0-34-E2-0F-51/7C-B0-C2-72-E9-F2 ,INDLAPTOP819,Windows,5CG7077GNX,HP,1,3,1
+261,Pratyay Ghosh,Pratyay.Ghosh@e-arc.com,Laptop,D4-54-8B-80-B3-94,INDLAPTOP132,Windows,3V80BK3,DELL,3,3,1
+262,Pranaya Jaiswal,Pranaya.Jaiswal@e-arc.com,Laptop,E4-60-17-DC-D1-A1,INDLAPTOP209,Windows,3ZH0QV3,DELL,3,3,1
+263,Sarthak Sampad Roy,Sarthak.Sampad.Roy@e-arc.com,Laptop,C8-D9-D2-90-BB-13,INDLAPTOP104,Windows,3ZH0QV3,DELL,3,3,1
+264,Divyanshu Kumar Singh / Sayan Saha,Divyanshu.Kumar.Singh./.Sayan.Saha@e-arc.com,Laptop,7C-70-DB-8F-E1-AC,INDLAPTOP917,Windows,GDF01J3,DELL,3,3,1
+265,Harsh Kumar Gupta,Harsh.Kumar.Gupta@e-arc.com,Laptop,E4-60-17-DB-B2-2B,INDLAPTOP106,Windows,5HRNSV3,DELL,3,3,1
+266,B. Rohit Rao,B..Rohit.Rao@e-arc.com,Laptop,00-A5-54-B3-AE-70,INDLAPTOP107,Windows,5CD2527MCX,HP,1,3,1
+267,Om Kumar / MD Husnain,Om.Kumar./.MD.Husnain@e-arc.com,Laptop,48-89-E7-91-9D-35,INDLAPTOP349,Windows,5CG0040XLM,HP,1,3,1
+268,Gunjana Das,Gunjana.Das@e-arc.com,Laptop,40-B0-34-E2-0F-6A                  7C-B0-C2-72-ED-4A,INDLAPTOP681,Windows,5CG7077GNS,HP,1,3,1
+269,Nilayan Sarkar,Nilayan.Sarkar@e-arc.com,Laptop,D4-54-8B-80-B7-77,INDLAPTOP133,Windows,8530.0BK3,DELL,3,3,1
+270,Sk Mahammad Mukim \ Bhimika Raj,Sk.Mahammad.Mukim.\.Bhimika.Raj@e-arc.com,Laptop,D4-54-8B-80-B1-82,INDLAPTOP135,Windows,2R80BK3,DELL,3,3,1
+271,Sumana Ghosh,Sumana.Ghosh@e-arc.com,Laptop,18-C0-4D-D7-C7-F5,INDDESKTOP108,Windows,H510MH,ASSEMBLED,,3,1
+272,Arunima Samaddar,Arunima.Samaddar@e-arc.com,Laptop,"D0-C6-37-74-C1-6A
+C8-F7-50-41-39-EB
+D0-C6-37-74-C1-6E",INKOLLAKASHS,Linux,JN8QVT2,DELL,3,1,1
+273,Rahul Mahapatra,Rahul.Mahapatra@e-arc.com,Desktop,88-51-FB-6D-69-91,INDDESKTOP185,Windows,INA342YPPR,HP,1,3,1
+274,MD Saqib ,MD.Saqib.@e-arc.com,Laptop,"7C-70-DB-BD-4A-5C  
+00-50-56-C0-00-01  
+00-50-56-C0-00-08",INDLAPTOP730,Windows,5CG14168LK,HP,1,3,1
+275,THUMMALAPALLI HARSHA VARDHAN,THUMMALAPALLI.HARSHA.VARDHAN@e-arc.com,Laptop,A8-A7-95-AB-A1-67,INDLAPTOP885,Windows,5CD5515Z46,HP,1,3,1
+276,Tushi Sutradhar,Tushi Sutradhar,Desktop,30-56-0f-10-9b-53,INDDESKTOP186,Windows,Assembled,ASSEMBLED,,3,1
+277,Aritra Karmakar,Aritra.Karmakar@e-arc.com,Laptop,44-E5-17-2D-DE-17,INDLAPTOP112,Windows,HHBP0J3,DELL,3,3,1
+278,Bratati Chakraborty,Bratati.Chakraborty@e-arc.com,Laptop,c8:d9:d2:90:bb:13    34:e1:2d:43:47:de,INDLAPTOP104,Windows,5CD8343Q78,HP,1,3,1
+279,,,,,,,,,,,
+280,,,,,,,,,,,
+281,,,,,,,,,,,
+282,,,,,,,,,,,
+283,,,,,,,,,,,
+284,,,,,,,,,,,
+285,,,,,,,,,,,
+286,,,,,,,,,,,
+287,,,,,,,,,,,
+288,,,,,,,,,,,
+289,,,,,,,,,,,
+290,,,,,,,,,,,
+291,,,,,,,,,,,
+292,,,,,,,,,,,
+293,,,,,,,,,,,
+294,,,,,,,,,,,
+295,,,,,,,,,,,
+296,,,,,,,,,,,
+297,,,,,,,,,,,
+298,,,,,,,,,,,
+299,,,,,,,,,,,
+300,,,,,,,,,,,
+
